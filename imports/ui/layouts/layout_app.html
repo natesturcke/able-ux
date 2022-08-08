@@ -1,0 +1,49 @@
+<template name="layout_app">
+
+  <body>
+
+    <div id="layoutApp">
+
+      {{#if Template.subscriptionsReady}}
+
+        <div class="nav-holder">
+          {{> nav_main}}
+        </div>
+
+        <div class="content-frame">
+
+
+
+            <div class="side-nav-holder">
+              {{> side_nav current_nav=current_nav sub_nav=sub_nav}}
+            </div>
+
+
+          <div class="main-template-holder">
+
+            {{> Template.dynamic template=main}}
+          </div>
+        </div>
+
+        {{#if popup}}
+
+          <div class="popup-holder">
+            <div class="popup-back"></div>
+
+            <div class="popup-content">
+              <i class="fa fa-close close-popup"></i>
+
+              {{> Template.dynamic template=popup}}
+            </div>
+          </div>
+
+        {{/if}}
+
+      {{/if}}
+    </div>
+
+  </body>
+
+  {{>tooltips}}
+
+</template>

@@ -1,0 +1,73 @@
+@import '../../css/vars.less';
+
+nav.nav-main {
+  padding: 0.5rem 0.5rem;
+  background: @back-gray;
+
+  > div.container {
+    .flex-bar;
+    max-width: unset !important;
+    padding: 0 1rem;
+    width: unset;
+    margin: 0 auto;
+
+    > * {
+      flex: 1 1 33%;
+    }
+  }
+
+  .round-button,
+  .square-button {
+    margin: 0;
+  }
+
+  .nav-logo {
+    height: 1.75rem;
+  }
+
+  .show-create-menu{
+    padding: 0.3rem 1rem 0.3rem 0.5rem;
+    margin-right: 0.5rem;
+  }
+
+  .search-input{
+    width: 100%;
+    border: 1px solid transparent;
+    background: darken(@back-gray, 5%);
+    transition: all 400ms;
+    display: flex;
+    border-radius: 0.5rem;
+    align-items: center;
+
+    i.fa{
+      flex: 0;
+      padding: 1rem;
+      }
+
+    input{
+      flex: 1;
+      padding: 0.75rem 0;
+      background: transparent;
+    }
+  }
+
+  .search-input:focus-within{
+    box-shadow: none;
+    background: #fff;
+    border: 1px solid @primary;
+
+    i.fa{
+      color: @primary;
+    }
+  }
+}
+
+nav.sub-nav {
+  padding: 0;
+  border-bottom: 1px solid @border;
+
+  > div.container {
+    .flex-bar;
+    margin: 0 auto;
+  }
+}

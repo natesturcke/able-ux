@@ -1,0 +1,96 @@
+<template name="nav_main">
+
+  <nav class="nav-main">
+
+    <div class="container">
+      <div class="left">
+
+        <a href="{{pathFor 'home' layout=getLayout}}">
+          <img src="/images/able.png" alt="able-logo-with-text" class="nav-logo">
+        </a>
+
+      </div>
+
+      <div class="center">
+        <div class="search-input search-input-holder input-with-icon">
+          <i class="fa fa-search"></i>
+          <input type="text" placeholder="Search...">
+        </div>
+
+      </div>
+
+      <div class="right">
+
+
+
+        <ul class="nav-list horizontal">
+          <li>
+            <a href="#">
+              <ion-icon name="help-circle-outline"></ion-icon>Help
+            </a>
+          </li>
+
+          <!--<li>
+
+            <a class="show-menu show-quick-link-menu" tabindex="0">
+              <ion-icon name="bookmark-outline"></ion-icon> Favourites
+
+              {{#if showQuickLinkMenu}}
+                <ul class="hover-menu">
+                  <li><a href="#">
+                      <ion-icon name="person-outline"></ion-icon>My coachees
+                    </a></li>
+                  <li><a href="#">
+                      <ion-icon name="briefcase-outline"></ion-icon>Active programs
+                    </a></li>
+                  <li><a href="#">
+                      <ion-icon name="cash-outline"></ion-icon>Pay runs
+                    </a></li>
+                  <li><a href="#">
+                      <ion-icon name="person-circle-outline"></ion-icon>My profile
+                    </a></li>
+                  <li>
+                    <a href="#">
+                      <ion-icon name="heart-outline"></ion-icon>Refer a partner
+                    </a>
+                  </li>
+                </ul>
+              {{/if}}
+            </a>
+
+          </li>-->
+
+          <li>
+
+            <button class="button outline show-menu show-create-menu with-icon" tabindex="0">
+              <ion-icon name="chevron-down-outline"></ion-icon>Create
+
+              {{#if showCreateMenu}}
+                <ul class="hover-menu">
+                  <li><a href="#">
+                      <ion-icon name="cash-outline"></ion-icon>New quote
+                    </a></li>
+                  <li><a href="#">
+                      <ion-icon name="folder-open-outline"></ion-icon>New project
+                    </a></li>
+
+                </ul>
+              {{/if}}
+            </button>
+          </li>
+
+        </ul>
+
+        <a href="#" class="user-horizontal">
+          <div class="user-avatar" style="background-image: url(/images/user.png)"> </div>
+          <span class="user-name">Nate Sturcke</span>
+        </a>
+      </div>
+    </div>
+
+  </nav>
+
+
+
+
+</template>

@@ -1,0 +1,167 @@
+
+
+
+@primary: #634cff;
+@primary-light: lighten(@primary,25%);
+@primary-very-light: lighten(@primary,30%);
+@primary-dark: #513ed5;
+
+
+@black: #1a1b25;
+@text: #6a7283;
+
+
+@light-gray:#ebeef1;
+@gray: #ebeef1;
+@dark-gray: darken(@gray, 20%);
+
+@back-gray: #f5f8fa;
+@back-gray-darker: darken(#f5f8fa, 5%);
+
+//@back-gray: @primary-very-light;
+
+@cool-gray: #f5f7fe;
+@dark-cool-gray: darken(@back-gray,10%);
+
+
+@highlight: #0000ff;
+
+
+@secondary: #ff328f;
+@tertiary: #00d8e3;
+
+@success: #d8f9c2;
+@success-text: #116b0d;
+@error: @pink;
+@warn: @yellow;
+
+@success-text: #13d18b;
+@error-text: #ff00cc;
+@warning: #fff1b3;
+@warning-text: #dbb612; //@dark-cool-gray: #e2e8ed;
+
+@shadow-small: 0 3px 5px rgba(0,0,100,0.05);
+@shadow: 0 3px 5px rgba(0, 0, 100, 0.05);
+@dark-shadow: 0 15px 30px rgba(100,100,150,0.75);
+@inner-padding: 2rem;
+@border-radius: 0.5rem;
+@border: @gray;
+//@font-main: 'DM Sans', sans-serif;
+//@font-header: 'DM Sans', sans-serif;
+
+@font-main: 'Open Sans', -apple-system, system-ui, BlinkMacSystemFont, Helvetica, Arial, "Segoe UI", Roboto, sans-serif;
+@font-header: 'Open Sans', -apple-system, system-ui, BlinkMacSystemFont, Helvetica, Arial, "Segoe UI", Roboto, sans-serif;
+@letter-spacing: 0.4rem;
+@toggle-width: 35px;
+@toggle-height: 14px; //
+
+
+input{
+	 border-style: solid;
+	 border: 1px solid @gray;
+}
+
+.focusBorder{
+	border: 1px solid @primary;
+	box-shadow: 0px 0px 0px 4px @primary-light;
+
+//	box-shadow: 0px 0px 0px 4px rgba(24,104,251,0.2);
+}
+
+.flex-center-mix{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+
+}
+
+.hideScroll{
+	.hidescrollbars::-webkit-scrollbar {
+	  display: none;
+	}
+
+	.hidescrollbars{
+	  -ms-overflow-style: none;  /* IE and Edge */
+	  scrollbar-width: none;  /* Firefox */
+	}
+}
+
+.nowrap{
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+.gradientBack(@col1, @col2){
+	background: @col1; /* Old browsers */
+	background: -moz-linear-gradient(45deg, @col1 0%, @col2 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(45deg, @col1 0%,@col2 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(45deg, @col1 0%,@col2 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@col1', endColorstr='@col2',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+}
+
+
+@purple: #5a56e9;
+@purple-light: lighten(@purple,20%);
+
+@pink: #ff338f;
+@pink-light: lighten(@pink, 35%);
+
+@green: #d8f9c2;
+@green-light: lighten(@green, 20%);
+
+@blue: #00D8E3;
+@blue-light: lighten(@blue, 45%);
+
+@yellow: #FFBB45;
+@yellow-light: lighten(@yellow, 20%);
+
+
+
+.horizontal-list{
+  list-style: none;
+  padding: 0px;
+  display: flex;
+  align-items: center;
+
+  li{
+    margin: 0px;
+  }
+}
+
+
+.flex-center{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-bar{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  .left{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .right{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+  }
+}
+
+.flex-row{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}

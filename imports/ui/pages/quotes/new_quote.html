@@ -1,0 +1,707 @@
+<template name='new_quote'>
+
+  <form class="form-overlay" id="newQuote">
+    <div class="form-overlay-header">
+
+      <div class="form-header">
+        <div class="container small">
+          <h1 class="form-title">{{#with quoteData.title}}Quote: {{this}}
+              {{else}}New quote{{/with}}</h1>
+
+          <ul class="form-nav step-nav">
+            <li class="step-nav-step {{#if equals getQuoteSection 'details'}} active{{/if}}">
+              <a href="{{pathFor 'quotes.new' quote_section='details'}}">
+                <span class="step-nav-complete complete">
+                  <ion-icon name="checkmark-outline"></ion-icon>
+                </span>
+                <div class="step-nav-step-details">
+                  <span class="step-nav-step-title">Quote setup</span>
+                </div>
+              </a>
+            </li>
+
+            <li class="step-nav-step {{#if equals getQuoteSection 'team'}}active{{/if}}">
+              <a href="{{pathFor 'quotes.new' quote_section='team'}}">
+                <span class="step-nav-complete"><span class="step-number">02</span></span>
+                <div class="step-nav-step-details">
+                  <span class="step-nav-step-title">Team</span>
+                </div>
+              </a>
+            </li>
+
+            <li class="step-nav-step {{#if equals getQuoteSection 'splits'}}active{{/if}}">
+              <a href="{{pathFor 'quotes.new' quote_section='splits'}}">
+                <span class="step-nav-complete"><span class="step-number">03</span></span>
+                <div class="step-nav-step-details">
+                  <span class="step-nav-step-title">Splits</span>
+                </div>
+              </a>
+            </li>
+
+            <li class="step-nav-step {{#if equals getQuoteSection 'components'}}active{{/if}}">
+              <a href="{{pathFor 'quotes.new' quote_section='components'}}">
+                <span class="step-nav-complete"><span class="step-number">04</span></span>
+                <div class="step-nav-step-details">
+                  <span class="step-nav-step-title">Components</span>
+                </div>
+              </a>
+            </li>
+
+            <li class="step-nav-step {{#if equals getQuoteSection 'cover'}}active{{/if}}">
+              <a href="{{pathFor 'quotes.new' quote_section='cover'}}">
+                <span class="step-nav-complete"><span class="step-number">05</span></span>
+                <div class="step-nav-step-details">
+                  <span class="step-nav-step-title">Cover letter</span>
+                </div>
+              </a>
+            </li>
+
+          </ul>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="form-elements">
+      <div class="container small">
+
+        {{#if equals getQuoteSection 'details'}}
+
+          <section class="form-section">
+
+            <div class="form-row">
+              <label>Project* <span class="helper-hover" data-tooltip="Tooltip text to be added.">
+                  <ion-icon name="information-circle-outline"></ion-icon>
+                </span></label>
+              <div class="input-holder">
+                <input type="text" class="blur-field" disabled value="Test Project (JOO2909)" required />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <label>Quote title <span class="helper-hover" data-tooltip="A descriptive title for your quote. This will appear on the quote that the client sees.">
+                  <ion-icon name="information-circle-outline"></ion-icon>
+                </span></label>
+              <div class="input-holder">
+                <input type="text" class="blur-field" data-targetfield="title" placeholder="Quote title" value="{{quoteData.title}}" />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="label-holder">
+                <label>Quote status*</label>
+              </div>
+
+              <div class="input-holder">
+                <ul class="horizontal narrow status-tabs">
+                  <li>
+                    <span class="badge {{#if equals quoteData.status 'Draft'}}warning{{/if}}">Draft</span>
+                  </li>
+                  <li>
+                    <span class="badge {{#if equals quoteData.status 'Accepted'}}green{{/if}}">Accepted</span>
+                  </li>
+                  <li>
+                    <span class="badge {{#if equals quoteData.status 'Active'}}blue{{/if}}">Active</span>
+                  </li>
+
+                </ul>
+              </div>
+
+            </div>
+
+            <div class="form-row">
+              <div class="label-holder">
+                <label>Deal owner* <span class="helper-hover" data-tooltip="Tooltip text to be added.">
+                    <ion-icon name="information-circle-outline"></ion-icon>
+                  </span></label>
+
+              </div>
+
+              <div class="input-holder">
+
+                <a href="#" class="user-horizontal">
+                  <div class="user-avatar" style="background-image: url(/images/users/jeroen.png)"> </div>
+                  <div class="user-details">
+                    <span class="user-name">Jeroen van Dalen</span>
+                    <span class="user-email">jeroen@gmail.com</span>
+
+                  </div>
+                </a>
+
+              </div>
+            </div>
+
+            <h4>Client</h4>
+
+            <div class="form-row">
+              <label>Customer company* <span class="helper-hover" data-tooltip="Tooltip text to be added.">
+                  <ion-icon name="information-circle-outline"></ion-icon>
+                </span></label>
+              <div class="input-holder">
+                <input type="text" class="blur-field" disabled value="Skills of the Modern Age" required />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <label>Customer Contact* <span class="helper-hover" data-tooltip="Tooltip text to be added.">
+                  <ion-icon name="information-circle-outline"></ion-icon>
+                </span></label>
+              <div class="input-holder">
+                <input type="text" class="blur-field" placeholder="Search or add a new contact..." value="{{quoteData.customerContact}}" required />
+              </div>
+            </div>
+
+          </section>
+
+        {{/if}}
+
+        {{#if equals getQuoteSection 'team'}}
+
+          <section class="form-section">
+
+            <div class="form-row">
+              <label>Add new team members <span class="helper-hover" data-tooltip="Tooltip text to be added.">
+                  <ion-icon name="information-circle-outline"></ion-icon>
+                </span></label>
+              <div class="input-holder">
+                <input type="text" class="blur-field" placeholder="Search by name or email..." value="{{quoteData.customerContact}}" required />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <label class="top">Current team members</label>
+
+              <div class="input-holder">
+
+                <ul class="user-list">
+                  <li>
+                    <a href="#" class="user-horizontal">
+                      <div class="user-avatar" style="background-image: url(/images/users/u1.png)"> </div>
+                      <div class="user-details">
+                        <span class="user-name strong">Jeff Coffee</span>
+                        <span class="user-email">jeff.coffee@gmail.com</span>
+                      </div>
+                    </a>
+
+                    <span class="button white tiny">
+                      <ion-icon name="close-outline"></ion-icon>Remove
+                    </span>
+
+                  </li>
+                  <li>
+                    <a href="#" class="user-horizontal">
+                      <div class="user-avatar" style="background-image: url(/images/users/jeroen.png)"> </div>
+                      <div class="user-details">
+                        <span class="user-name">Jeroen van Dalen</span>
+                        <span class="user-email">jeroen@gmail.com</span>
+
+                      </div>
+                    </a>
+                    <span class="button white tiny">
+                      <ion-icon name="close-outline"></ion-icon>Remove
+                    </span>
+
+                  </li>
+                  <li>
+                    <a href="#" class="user-horizontal">
+                      <div class="user-avatar" style="background-image: url(/images/users/u2.png)"> </div>
+                      <div class="user-details">
+
+                        <span class="user-name">Matt Polin</span>
+                        <span class="user-email">jeroen@gmail.com</span>
+                      </div>
+
+                    </a>
+                    <span class="button white tiny">
+                      <ion-icon name="close-outline"></ion-icon>Remove
+                    </span>
+
+                  </li>
+
+                  <li>
+                    <a href="#" class="user-horizontal">
+                      <div class="user-avatar" style="background-image: url(/images/users/u3.png)"> </div>
+                      <div class="user-details">
+
+                        <span class="user-name">Jafran Seilisky</span>
+                        <span class="user-email">jeroen@gmail.com</span>
+                      </div>
+
+                    </a>
+                    <span class="button white tiny">
+                      <ion-icon name="close-outline"></ion-icon>Remove
+                    </span>
+
+                  </li>
+                </ul>
+
+              </div>
+            </div>
+
+          </section>
+
+        {{/if}}
+
+        {{#if equals getQuoteSection 'splits'}}
+
+          <section class="form-section">
+
+            <div class="split-columns border-bottom">
+
+              <div>
+              </div>
+
+              <div>
+
+                <div class="form-row standout green">
+                  <label class="black">Total</label>
+
+                  <div class="input-holder">
+                    <div class="input-percentage input-multi clear">
+                      <input value='100.00' placeholder='0.00' disabled />
+                      <span>%</span>
+                    </div>
+                  </div>
+
+                </div>
+
+              </div>
+            </div>
+
+
+
+            <div class="split-columns border-bottom">
+
+              <div>
+                <h4>Service</h4>
+                <p>
+                  These are optional services available to support your project.
+                </p>
+              </div>
+
+              <div>
+
+                <div class="form-row standout">
+                  <label class="black">Service fee total</label>
+
+                  <div class="input-holder">
+                    <div class="input-percentage input-multi clear">
+                      <input value='20.00' placeholder='0.00' disabled />
+                      <span>%</span>
+                    </div>
+                  </div>
+
+                </div>
+
+                <div class="form-row split-row">
+
+                  <div class="label-holder">
+
+                    <span class="checkbox-style">
+                      <ion-icon name="checkbox" class="click-field" data-targetfield="branding" data-setvalue=""></ion-icon>
+                    </span>
+
+                    <label>Use partner network<span class="helper-hover" data-tooltip="Tooltip text to be added.">
+                        <ion-icon name="information-circle-outline"></ion-icon>
+                      </span></label>
+
+                  </div>
+
+                  <div class="input-holder">
+                    <div class="input-percentage input-multi disabled">
+                      <input value='5.00' placeholder='0.00' disabled />
+                      <span>%</span>
+                    </div>
+                  </div>
+
+                </div>
+
+                <div class="form-row split-row">
+
+                  <div class="label-holder">
+
+                    <span class="checkbox-style">
+                      <ion-icon name="checkbox" class="click-field" data-targetfield="branding" data-setvalue=""></ion-icon>
+                    </span>
+
+                  <label>RTO Project<span class="helper-hover" data-tooltip="Tooltip text to be added.">
+                      <ion-icon name="information-circle-outline"></ion-icon>
+                    </span></label>
+
+                  </div>
+
+
+                  <div class="input-holder">
+                    <div class="input-percentage input-multi disabled">
+                      <input value='5.00' placeholder='0.00' disabled />
+                      <span>%</span>
+                    </div>
+                  </div>
+
+                </div>
+
+                <div class="form-row  split-row">
+
+                  <div class="label-holder">
+
+                    <span class="checkbox-style">
+                      <ion-icon name="square-outline" class="click-field" data-targetfield="branding" data-setvalue="true"></ion-icon>
+                    </span>
+
+
+                  <label>Proposal support<span class="helper-hover" data-tooltip="Tooltip text to be added.">
+                      <ion-icon name="information-circle-outline"></ion-icon>
+                    </span></label>
+
+                    </div>
+
+                  <div class="input-holder">
+                    <div class="input-percentage input-multi disabled">
+                      <input value='20.00' placeholder='0.00' disabled />
+                      <span>%</span>
+                    </div>
+                  </div>
+
+                </div>
+
+                <div class="form-row  split-row">
+
+                  <div class="label-holder">
+
+                    <span class="checkbox-style">
+                      <ion-icon name="square-outline" class="click-field" data-targetfield="branding" data-setvalue="true"></ion-icon>
+                    </span>
+
+                  <label>Sales support<span class="helper-hover" data-tooltip="Tooltip text to be added.">
+                      <ion-icon name="information-circle-outline"></ion-icon>
+                    </span></label>
+
+                    </div>
+
+                  <div class="input-holder">
+                    <div class="input-percentage input-multi disabled">
+                      <input value='15.00' placeholder='0.00' disabled />
+                      <span>%</span>
+                    </div>
+                  </div>
+
+                </div>
+
+                <div class="form-row  split-row">
+
+                  <div class="label-holder">
+
+                    <span class="checkbox-style">
+                      <ion-icon name="square-outline" class="click-field" data-targetfield="branding" data-setvalue="true"></ion-icon>
+                    </span>
+
+                  <label>Coordination support<span class="helper-hover" data-tooltip="Tooltip text to be added.">
+                      <ion-icon name="information-circle-outline"></ion-icon>
+                    </span></label>
+
+                    </div>
+
+                  <div class="input-holder">
+                    <div class="input-percentage input-multi disabled">
+                      <input value='8.00' placeholder='0.00' disabled />
+                      <span>%</span>
+                    </div>
+                  </div>
+
+                </div>
+
+                <div class="form-row split-row">
+
+                  <div class="label-holder">
+
+                    <span class="checkbox-style">
+                      <ion-icon name="checkbox" class="click-field" data-targetfield="branding" data-setvalue=""></ion-icon>
+                    </span>
+
+                  <label>Project lead<span class="helper-hover" data-tooltip="Tooltip text to be added.">
+                      <ion-icon name="information-circle-outline"></ion-icon>
+                    </span></label>
+
+                    </div>
+
+                  <div class="input-holder">
+                    <div class="input-percentage input-multi disabled">
+                      <input value='10.00' placeholder='0.00' disabled />
+                      <span>%</span>
+                    </div>
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+            <div class="split-columns">
+
+              <div>
+                <h4>Team Splits</h4>
+                <p>
+                  Distribute income with the team
+                </p>
+              </div>
+
+              <div>
+
+                <div class="form-row standout">
+                  <label class="black">Team Splits total</label>
+
+                  <div class="input-holder">
+                    <div class="input-percentage input-multi clear">
+                      <input value='10.00' placeholder='0.00' disabled />
+                      <span>%</span>
+                    </div>
+                  </div>
+
+                </div>
+
+
+
+                <div class="form-row top">
+                  <div class="label-holder">
+
+                    <label class="flex-row">Deal owner %<span class="helper-hover" data-tooltip="Tooltip text to be added.">
+                        <ion-icon name="information-circle-outline"></ion-icon>
+                      </span></label>
+
+                    <a href="#" class="user-horizontal">
+                      <div class="user-avatar" style="background-image: url(/images/users/jeroen.png)"> </div>
+                      <div class="user-details">
+                        <span class="user-name">Jeroen van Dalen</span>
+                        <span class="user-email">jeroen@gmail.com</span>
+
+                      </div>
+                    </a>
+
+                  </div>
+
+                  <div class="input-holder">
+                    <div class="input-percentage input-multi">
+                      <input value='10.00' placeholder='0.00' />
+                      <span>%</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <label>PLC %<span class="helper-hover" data-tooltip="Tooltip text to be added.">
+                      <ion-icon name="information-circle-outline"></ion-icon>
+                    </span></label>
+                  <div class="input-holder">
+                    <div class="input-percentage input-multi">
+                      <input value='5.00' placeholder='0.00' />
+                      <span>%</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <label>Delivery team %<span class="helper-hover" data-tooltip="Tooltip text to be added.">
+                      <ion-icon name="information-circle-outline"></ion-icon>
+                    </span></label>
+                  <div class="input-holder">
+                    <div class="input-percentage input-multi">
+                      <input value='5.00' placeholder='0.00' />
+                      <span>%</span>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+
+          </section>
+
+        {{/if}}
+
+        {{#if equals getQuoteSection 'cover'}}
+
+          <div class="form-row">
+            <label>Use Integral branding <span class="helper-hover" data-tooltip="Tooltip text to be added.">
+                <ion-icon name="information-circle-outline"></ion-icon>
+              </span></label>
+            <div class="input-holder">
+              <span class="checkbox-style">
+                {{#if quoteData.branding}}
+                  <ion-icon name="checkbox" class="click-field" data-targetfield="branding" data-setvalue=""></ion-icon>
+                {{else}}
+                  <ion-icon name="square-outline" class="click-field" data-targetfield="branding" data-setvalue="true"></ion-icon>
+                {{/if}}
+              </span>
+            </div>
+          </div>
+
+          <div class="test">
+            <textarea id="textEditor">Hello, World!</textarea>
+
+            {{createEditor}}
+          </div>
+
+        {{/if}}
+
+        {{#if equals getQuoteSection 'components'}}
+
+          <a href="#" class="button">Add component</a>
+          <br />
+
+          <table class="styled" id="projectTable">
+            <thead>
+              <tr>
+                <th class="w125">Category</th>
+                <th class="">Description</th>
+                <th class="">Optional</th>
+                <th class="">Unit price</th>
+
+                <th class="">Quantity</th>
+                <th class="">Line total</th>
+                <th style="width: 140px;">
+
+                </th>
+              </tr>
+
+            </thead>
+            <tbody id="">
+              <tr>
+                <td class="skinny"> <span class="badge blue">Coaching</span>
+                </td>
+                <td>
+                  <strong>Standard Coaching Program (F2F or online)</strong>
+                  <span>60mins x 4</span>
+                </td>
+                <td class="skinny">
+                  <span class="badge">No</span>
+
+                </td>
+                <td>
+                  $1,800.00
+                </td>
+                <td>
+                  2
+                </td>
+
+                <td>
+                  <strong>$3,600.00</strong>
+                </td>
+
+                <td>
+                  <div class="button-list">
+                    <a href="#" class="square-button" data-tooltip="Edit">
+                      <ion-icon name="create-outline"></ion-icon>
+                    </a>
+                    <a href="#" class="square-button" data-tooltip="Remove">
+                      <ion-icon name="trash-outline"></ion-icon>
+                    </a>
+                  </div>
+
+                </td>
+              </tr>
+
+            </tbody>
+
+            <tbody id="">
+              <tr>
+                <td class="skinny"> <span class="badge blue">Coaching</span>
+                </td>
+                <td>
+                  <strong>Standard Coaching Program (F2F or online)</strong>
+                  <span>60mins x 4</span>
+                </td>
+                <td class="skinny"> <span class="badge">No</span>
+
+                </td>
+                <td>
+                  $1,800.00
+                </td>
+                <td>
+                  2
+                </td>
+
+                <td>
+                  <strong>$3,600.00</strong>
+                </td>
+
+                <td>
+                  <div class="button-list">
+                    <a href="#" class="square-button" data-tooltip="Edit">
+                      <ion-icon name="create-outline"></ion-icon>
+                    </a>
+                    <a href="#" class="square-button" data-tooltip="Remove">
+                      <ion-icon name="trash-outline"></ion-icon>
+                    </a>
+                  </div>
+
+                </td>
+              </tr>
+
+            </tbody>
+
+            <tfoot>
+              <tr tabindex="-1">
+                <td colspan="5" class="total-title">Total:</td>
+                <td class="">$7,200</td>
+
+                <td class="button-list">
+
+                </td>
+              </tr>
+            </tfoot>
+          </table>
+
+        {{/if}}
+
+      </div>
+
+    </div>
+
+    <div class="form-bottom">
+      <div class="container small">
+        <div class="spacer">
+
+        </div>
+
+        <div class="next-holder">
+          {{#if equals getQuoteSection 'details'}}
+            <a href="{{pathFor 'quotes.new' quote_section='team'}}" class="button icon-left">2. Client
+              <ion-icon name="arrow-forward-outline"></ion-icon>
+            </a>
+          {{/if}}
+
+          {{#if equals getQuoteSection 'team'}}
+            <a href="{{pathFor 'quotes.new' quote_section='splits'}}" class="button icon-left">3. Splits
+              <ion-icon name="arrow-forward-outline"></ion-icon>
+            </a>
+          {{/if}}
+
+          {{#if equals getQuoteSection 'splits'}}
+            <a href="{{pathFor 'quotes.new' quote_section='components'}}" class="button icon-left">4. Components
+              <ion-icon name="arrow-forward-outline"></ion-icon>
+            </a>
+          {{/if}}
+
+          {{#if equals getQuoteSection 'components'}}
+            <a href="{{pathFor 'quotes.new' quote_section='cover'}}" class="button icon-left">5. Cover
+              <ion-icon name="arrow-forward-outline"></ion-icon>
+            </a>
+          {{/if}}
+
+          {{#if equals getQuoteSection 'cover'}}
+            <a href="{{pathFor 'quotes'}}" class="button">
+              <ion-icon name="checkmark-outline"></ion-icon>Finish
+
+            </a>
+          {{/if}}
+        </div>
+
+      </div>
+
+    </div>
+
+  </form>
+
+</template>

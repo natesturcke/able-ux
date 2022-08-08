@@ -1,0 +1,135 @@
+<template name="project_nav">
+
+  <nav class="project-nav side-nav {{#if current_program}}has-program-nav{{/if}}">
+
+    <!--
+    <div class="title-holder">
+      <a href="{{pathFor 'projects.view' layout=getLayout}}" class="project-name">This is a very long project name that should break the formatting</a>
+      <a class="company-name">Integral</a>
+    </div>-->
+
+
+<!--
+    {{#unless current_program}}
+
+
+
+
+    <div class="programs-holder">
+      <a href="{{pathFor 'projects.view' layout=getLayout}}" class="programs-label">
+        <ion-icon name="list-outline"></ion-icon><span>Programs</span>
+      </a>
+
+      <ul class="nav-list project-programs-list">
+        <li class="{{#if current_program}}current{{/if}}">
+          <a href="{{pathFor 'projects.program.view' program_name='test-program' layout=getLayout }}">Example program</a>
+        </li>
+
+        <li class="">
+          <a href="{{pathFor 'projects.program.view' program_name='test-program' layout=getLayout}}">Another program</a>
+        </li>
+
+        <li class="">
+          <a href="{{pathFor 'projects.program.view' program_name='test-program' layout=getLayout}}">Program 4</a>
+        </li>
+
+
+      </ul>
+    </div>
+
+    {{/unless}}-->
+
+
+    <ul class="nav-list side-nav-list project-nav-list">
+
+      <li class="current">
+        <a href="{{pathFor 'projects.view' layout=getLayout}}" >
+          <ion-icon name="list-outline"></ion-icon><span>Programs</span>
+        </a>
+      </li>
+
+
+      <li>
+        <a href="#">
+          <ion-icon name="settings-outline"></ion-icon><span>Project settings</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="#">
+          <ion-icon name="cash-outline"></ion-icon><span>Quotes</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="#">
+          <ion-icon name="documents-outline"></ion-icon><span>Invoicing</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="#">
+          <ion-icon name="lock-open-outline"></ion-icon><span>Access</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="#">
+          <ion-icon name="create-outline"></ion-icon><span>Customise</span>
+        </a>
+      </li>
+    </ul>
+
+  </nav>
+
+    <nav class="program-nav side-nav {{#if current_program}}show-nav{{/if}}">
+
+      <ul class="nav-list program-nav-list">
+
+        <li class="{{#if current_program}}current{{/if}}">
+          <a href="#">
+            <ion-icon name="bookmark-outline"></ion-icon>Overview
+          </a>
+        </li>
+
+        <li>
+          <a href="#">
+            <ion-icon name="podium-outline"></ion-icon>Participants
+          </a>
+        </li>
+
+        <li>
+          <a href="#">
+            <ion-icon name="documents-outline"></ion-icon>Workshops
+          </a>
+        </li>
+
+        <li>
+          <a href="#">
+            <ion-icon name="hourglass-outline"></ion-icon>Consulting items
+          </a>
+        </li>
+
+        <li>
+          <a href="#">
+            <ion-icon name="podium-outline"></ion-icon>Surveys
+          </a>
+        </li>
+
+        <li>
+          <a href="#">
+            <ion-icon name="mail-outline"></ion-icon>Email
+          </a>
+        </li>
+
+        <li>
+          <a href="#">
+            <ion-icon name="settings-outline"></ion-icon>Settings
+          </a>
+        </li>
+      </ul>
+
+    </nav>
+
+
+</template>

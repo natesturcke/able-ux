@@ -1,0 +1,134 @@
+@import '../css/vars.less';
+@import '../css/utils.less';
+
+.popup-holder {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  padding-top: 4rem;
+  z-index: 9999;
+  position: absolute;
+  .animfadeIn;
+
+  .close-popup {
+    position: absolute;
+    right: 0.5rem;
+    top: 2rem;
+    font-size: 1.5rem;
+    color: rgba(0,0,0,0.15);
+    cursor: pointer;
+    z-index: 999;
+    display: inline-block;
+    padding: 1rem;
+  }
+
+  .close-popup:hover {
+    color: @error;
+  }
+}
+
+.popup-back {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(250,250,255,0.75);
+  z-index: 888;
+}
+
+.popup-content {
+  box-shadow: 0 15px 30px rgba(0,0,100,0.45);
+  background: #fff;
+  border-radius: 0.5rem;
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+  box-sizing: border-box;
+  width: 600px;
+  max-width: 100%;
+  margin: 0 auto 4rem;
+  color: @black;
+  border: none;
+  position: relative;
+  z-index: 999;
+  overflow: visible;
+}
+
+
+
+.progress-holder {
+  width: 80px;
+  display: block;
+  text-align: center;
+  position: relative;
+  top: 0.5rem;
+
+  .progress-bar {
+    height: 8px;
+    background: @gray;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    position: relative;
+
+    .progress {
+      background: #b9f591;
+      position: absolute;
+      left: 0;
+      height: 8px;
+      top: 0;
+      width: 0;
+    }
+  }
+
+  .progress-label{
+    margin-top: 0.25rem;
+    display: inline-block;
+  }
+}
+
+
+#layoutApp {
+  .container {
+    max-width: 1800px;
+  }
+
+
+
+  .main-template-holder{
+
+    max-width: 1800px;
+    width: 100%;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .nav-holder {
+    position: fixed;
+    width: 100%;
+    background: #fff;
+    z-index: 999;
+  }
+
+  .content-frame {
+    padding-top: 6rem;
+    padding-left: 200px;
+    display: flex;
+    margin: 0 auto;
+    width: 100%;
+
+    .side-nav-holder {
+      position: fixed;
+      width: 200px;
+      left: 0;
+      top: 0;
+      padding-top: 5rem;
+      height: 100%;
+      flex: 0 0 auto;
+      margin-right: 2rem;
+      border-right: 1px solid @border;
+    }
+
+  }
+}

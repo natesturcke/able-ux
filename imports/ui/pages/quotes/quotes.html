@@ -1,0 +1,117 @@
+<template name='quotes'>
+
+
+  <div class="content-section top">
+    <div class="content-section-title-holder">
+      <h1 class="content-section-title">Quotes</h1>
+    </div>
+  </div>
+  <div class="content-action-bar">
+
+    <div class="left">
+      <ul class="tab-buttons">
+        <li class="current">
+          <a href="#">Active</a>
+        </li>
+        <li>
+          <a href="#">Accepted</a>
+        </li>
+      </ul>
+
+      <div class="input-row with-icon search-input">
+        <i class="fa fa-search"></i>
+        <input type="text" placeholder="Search job number, name...">
+      </div>
+
+    </div>
+
+    <div class="right">
+        <a href="{{pathFor 'quotes.new' quote_section='details'}}" class="button">New quote</a>
+    </div>
+
+  </div>
+  <table id="tblQuotes" class="table styled">
+          <thead>
+            <tr>
+              <th>Company &amp; Project</th>
+              <th class="w125 align-center">Created</th>
+              <th class="w125 align-center">Status</th>
+              <th class="w125 align-center">Closed out</th>
+
+              <th class="w75 align-center">Items</th>
+              <th class="w125 align-right pr20">Total ex-GST</th>
+            </tr>
+
+
+          </thead>
+          <tbody id="tblQuotesBody"><tr class="rowData" data-rowlink-id="43149151-3a81-4df6-a4d6-f34d5e52c2a7" tabindex="0">
+              <td class="skinny" data-fieldname="JobTitle">
+                <span class="project-name title-info">Test quote 1</span>
+                <span class="company-name">Skills of the Modern Age</span>
+                <span>(J98688)</span>
+
+              </td>
+
+
+              <td class="align-center pl0 pr0" data-fieldname="CreatedUtc" data-isutcdate="true" data-format="D MMM YYYY">18 May 2022</td>
+              <td class="align-center  skinny" data-fieldname="StatusText"><span class="badge warning">Draft</span></td>
+              <td class="align-center pl0 pr0" data-fieldname="CreatedUtc" data-isutcdate="true" data-format="D MMM YYYY">18 May 2022</td>
+
+              <td class="align-center" data-fieldname="QuoteItemCount">1</td>
+              <td class="align-right pr20" data-fieldname="QuoteItemTotalAmount" data-format="currency">$2,475.00</td>
+            </tr><tr class="rowData" data-rowlink-id="79f61082-461c-4157-adc0-86f13c052a6b" tabindex="0">
+              <td class="skinny" data-fieldname="JobTitle">
+                <span class="project-name title-info">Test quote 1</span>
+                <span class="company-name">Skills of the Modern Age</span>
+                <span>(J98688)</span>
+
+              </td>              <td class="align-center pl0 pr0" data-fieldname="CreatedUtc" data-isutcdate="true" data-format="D MMM YYYY">18 May 2022</td>
+              <td class="align-center  skinny" data-fieldname="StatusText"><span class="badge green">Active</span></td>
+              <td class="align-center pl0 pr0" data-fieldname="CreatedUtc" data-isutcdate="true" data-format="D MMM YYYY">18 May 2022</td>
+
+              <td class="align-center" data-fieldname="QuoteItemCount">1</td>
+              <td class="align-right pr20" data-fieldname="QuoteItemTotalAmount" data-format="currency">$2,475.00</td>
+            </tr><tr class="rowData" data-rowlink-id="c1c77347-e1e7-444c-8d76-04a0f772cf7e" tabindex="0">
+              <td class="skinny" data-fieldname="JobTitle">
+                <span class="project-name title-info">Test quote 1</span>
+                <span class="company-name">Skills of the Modern Age</span>
+                <span>(J98688)</span>
+
+              </td>              <td class="align-center pl0 pr0" data-fieldname="CreatedUtc" data-isutcdate="true" data-format="D MMM YYYY">10 May 2022</td>
+              <td class="align-center skinny" data-fieldname="StatusText"><span class="badge blue">Accepted</span></td>
+              <td class="align-center pl0 pr0" data-fieldname="CreatedUtc" data-isutcdate="true" data-format="D MMM YYYY">18 May 2022</td>
+
+              <td class="align-center" data-fieldname="QuoteItemCount">2</td>
+              <td class="align-right pr20" data-fieldname="QuoteItemTotalAmount" data-format="currency">$3,500.00</td>
+            </tr><tr class="rowData" data-rowlink-id="d101ad4e-87f2-45ca-98ed-ab0f2bb4d9cc" tabindex="0">
+              <td class="skinny" data-fieldname="JobTitle">
+                <span class="project-name title-info">Test quote 1</span>
+                <span class="company-name">Skills of the Modern Age</span>
+                <span>(J98688)</span>
+
+              </td>              <td class="align-center pl0 pr0" data-fieldname="CreatedUtc" data-isutcdate="true" data-format="D MMM YYYY">21 Feb 2022</td>
+              <td class="align-center  skinny" data-fieldname="StatusText"><span class="badge blue">Accepted</span></td>
+              <td class="align-center pl0 pr0" data-fieldname="CreatedUtc" data-isutcdate="true" data-format="D MMM YYYY">18 May 2022</td>
+
+              <td class="align-center" data-fieldname="QuoteItemCount">2</td>
+              <td class="align-right pr20" data-fieldname="QuoteItemTotalAmount" data-format="currency">$0.00</td>
+            </tr></tbody>
+        </table>
+
+  <div class="table-bottom">
+
+    <div class="left">
+      <span class="badge found-badge">2 results</span>
+
+    </div>
+
+    <div class="right">
+
+      <a href="#" class="button white pagination-button">Prevous</a>
+      <a href="#" class="button white pagination-button">Next</a>
+    </div>
+
+  </div>
+
+
+</template>

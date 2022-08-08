@@ -1,0 +1,129 @@
+<template name="side_nav">
+
+
+  <nav class="side-nav">
+
+    <ul class="nav-list">
+
+      <li class="{{#if both (equals current_nav 'dashboard') sub_nav}}current-sub{{else}}{{#if equals current_nav 'dashboard'}}current{{/if}}  {{/if}}">
+        <a href="{{pathFor 'home' layout=getLayout}}">
+          <span><ion-icon name="home-outline"></ion-icon>Dashboard</span>
+
+          <ion-icon name="chevron-forward-outline" class="nav-chevron"></ion-icon>
+
+        </a>
+
+
+        {{#if equals sub_nav 'dashboard'}}
+
+        <ul class="nav-list sub-nav">
+          <li>
+            <a href="#">
+              <span><ion-icon name="calendar-outline"></ion-icon>Upcoming</span>
+            </a>
+          </li>
+
+          <li class="{{#if equals currentPathName 'coachees'}}current{{/if}}">
+            <a href="{{pathFor 'coachees'}}">
+              <span><ion-icon name="people-outline"></ion-icon>Coachees</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <span><ion-icon name="folder-open-outline"></ion-icon>Active Programs</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <span><ion-icon name="wallet-outline"></ion-icon>Pay Runs</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <span><ion-icon name="arrow-redo-outline"></ion-icon>Referrals</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <span><ion-icon name="person-circle-outline"></ion-icon>My profile</span>
+            </a>
+          </li>
+        </ul>
+
+        {{/if}}
+      </li>
+
+      <li class="{{#if both (equals current_nav 'project') sub_nav}}current-sub{{else}}{{#if equals current_nav 'project'}}current{{/if}}  {{/if}}">
+        <a href="{{pathFor 'projects' layout=getLayout}}">
+          <span><ion-icon name="folder-open-outline"></ion-icon>Project</span>
+        </a>
+
+        {{#if equals sub_nav 'project_nav'}}
+
+        <ul class="nav-list sub-nav">
+
+          <li class="current">
+            <a href="{{pathFor 'projects.view' layout=getLayout}}" >
+              <span><ion-icon name="list-outline"></ion-icon>Programs</span>
+            </a>
+          </li>
+
+
+          <li>
+            <a href="#">
+              <span><ion-icon name="settings-outline"></ion-icon>Project settings</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <span><ion-icon name="cash-outline"></ion-icon>Quotes</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <span><ion-icon name="documents-outline"></ion-icon>Invoicing</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <span><ion-icon name="lock-open-outline"></ion-icon>Access</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <span><ion-icon name="create-outline"></ion-icon>Customise</span>
+            </a>
+          </li>
+        </ul>
+
+        {{/if}}
+      </li>
+      <li class="{{#if equals current_nav 'quotes'}}current{{/if}}">
+        <a href="{{pathFor 'quotes'}}">
+          <span><ion-icon name="cash-outline"></ion-icon>Quotes</span>
+        </a>
+      </li>
+      <li>
+        <a href="{{pathFor 'partners'}}">
+          <span><ion-icon name="people-outline"></ion-icon> Partner network</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <span><ion-icon name="cellular-outline"></ion-icon> Quality reports</span>
+        </a>
+      </li>
+    </ul>
+
+
+  </nav>
+
+</template>

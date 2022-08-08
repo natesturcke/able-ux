@@ -1,0 +1,119 @@
+<template name='project_home'>
+
+  <div class="content-section">
+
+    <div class="bread-crumbs">
+      <a href="#" class="company-name">Integral</a>
+      <ion-icon name="chevron-forward-outline"></ion-icon>
+      <span class="project-name">Test Project</span>
+
+    </div>
+    <div class="content-section-title-holder">
+      <h1 class="content-section-title">Programs</h1>
+    </div>
+  </div>
+  <div class="content-action-bar">
+
+    <div class="left">
+
+      <div class="input-row with-icon search-input">
+        <i class="fa fa-search"></i>
+        <input type="text" placeholder="Search program name...">
+      </div>
+
+    </div>
+
+    <div class="right">
+
+      <button href="#" class="button">Add new program</button>
+
+    </div>
+
+  </div>
+
+  <table class="styled" id="programsTable">
+    <thead>
+      <tr>
+
+        <th class="">Program Name</th>
+        <th class="w125 align-center">Start Date</th>
+        <th class="w125 align-center">End Date</th>
+        <th class="w75 align-center">Status</th>
+        <th class="w50 align-center">Req Sent</th>
+        <th class="w50 align-center">Participants</th>
+        <th class="w50 align-center">Workshops</th>
+        <th style="width: 140px">
+          
+        </th>
+      </tr>
+
+    </thead>
+    <tbody id="tblProgramsBody">
+      <tr class="rowData" data-rowlink-id="9094" tabindex="0">
+
+        <td data-fieldname="ProgramJobName"><strong>Example program</strong></td>
+        <td data-fieldname="ProgramStartDateUtc" data-isutcdate="true" data-format="D MMM YYYY">18 May 2022</td>
+        <td data-fieldname="ProgramEndDateUtc" data-isutcdate="true" data-format="D MMM YYYY">16 Aug 2022</td>
+        <td data-fieldname="ProgramStatus" class="skinny"><span class="badge green">In progress</span></td>
+        <td data-fieldname="RequestSent"></td>
+        <td data-fieldname="ParticipantCount">0</td>
+        <td data-fieldname="WorkshopCount">0</td>
+        <td class="button-list">
+          <a href="#" class="square-button" data-tooltip="View"><ion-icon name="search-outline"></ion-icon></a>
+          <a href="#" class="square-button" data-tooltip="Edit"><ion-icon name="create-outline"></ion-icon></a>
+          <a href="#" class="square-button" data-tooltip="Remove"><ion-icon name="trash-outline"></ion-icon></a>
+
+        </td>
+      </tr>
+      <tr class="rowData" data-rowlink-id="9060" tabindex="0">
+
+        <td data-fieldname="ProgramJobName"><strong>Another program</strong></td>
+        <td data-fieldname="ProgramStartDateUtc" data-isutcdate="true" data-format="D MMM YYYY">10 May 2022</td>
+        <td data-fieldname="ProgramEndDateUtc" data-isutcdate="true" data-format="D MMM YYYY">8 Aug 2022</td>
+        <td data-fieldname="ProgramStatus" class="skinny"><span class="badge blue">Setup</span></td>
+        <td data-fieldname="RequestSent"></td>
+        <td data-fieldname="ParticipantCount">2</td>
+        <td data-fieldname="WorkshopCount">0</td>
+        <td class="button-list">
+          <a href="#" class="square-button" data-tooltip="View"><ion-icon name="search-outline"></ion-icon></a>
+          <a href="#" class="square-button" data-tooltip="Edit"><ion-icon name="create-outline"></ion-icon></a>
+          <a href="#" class="square-button" data-tooltip="Remove"><ion-icon name="trash-outline"></ion-icon></a>
+
+        </td>
+      </tr>
+
+      <tr class="rowData" data-rowlink-id="9060" tabindex="0">
+
+        <td data-fieldname="ProgramJobName"><strong>Program 4</strong></td>
+        <td data-fieldname="ProgramStartDateUtc" data-isutcdate="true" data-format="D MMM YYYY">10 May 2022</td>
+        <td data-fieldname="ProgramEndDateUtc" data-isutcdate="true" data-format="D MMM YYYY">8 Aug 2022</td>
+        <td data-fieldname="ProgramStatus" class="skinny"><span class="badge warning">Cancelled</span></td>
+        <td data-fieldname="RequestSent"></td>
+        <td data-fieldname="ParticipantCount">2</td>
+        <td data-fieldname="WorkshopCount">0</td>
+        <td class="button-list">
+          <a href="#" class="square-button" data-tooltip="View"><ion-icon name="search-outline"></ion-icon></a>
+          <a href="#" class="square-button" data-tooltip="Edit"><ion-icon name="create-outline"></ion-icon></a>
+          <a href="#" class="square-button" data-tooltip="Remove"><ion-icon name="trash-outline"></ion-icon></a>
+
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="table-bottom">
+
+    <div class="left">
+      <span class="badge found-badge">2 results</span>
+
+    </div>
+
+    <div class="right">
+
+      <a href="#" class="button white pagination-button">Prevous</a>
+      <a href="#" class="button white pagination-button">Next</a>
+    </div>
+
+  </div>
+
+</template>
