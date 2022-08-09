@@ -365,3 +365,120 @@ select {
 
 
 }
+
+
+
+.select2-container{
+
+  .select2-dropdown{
+    border-color: @border;
+    border-radius: 0.5rem;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+
+    .select2-search__field{
+      padding: 1rem 1.5rem;
+      background: @back-gray;
+      border-color: #fff;
+    }
+  }
+
+  .select2-search--inline{
+
+    .select2-search__field{
+      padding: 0.25rem;
+      background: @back-gray;
+      border-radius: 0.25rem;
+      margin: 0;
+      margin-right: 0.5rem;
+
+    }
+
+    .select2-search__field{
+
+    }
+
+    .select2-search__field:focus, .select2-search__field:active{
+      border-color: @gray !important;
+    }
+  }
+
+
+  .select2-selection--single, .select2-selection--multiple{
+    border: 1px solid @border;
+    border-radius: 0.5rem;
+    height: 3.5rem;
+
+    .select2-selection__rendered{
+      color: @black;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+      padding-left: 1.5rem;
+      line-height: unset;
+    }
+
+    .select2-selection__arrow{
+        height: 1.5rem;
+        position: absolute;
+        top: 0.9rem;
+        right: 0.5rem;
+        width: 1.5rem;
+        font-size: 1.5rem;
+    }
+
+  }
+
+  .select2-selection--multiple{
+    .select2-selection__rendered{
+      padding-top: 0.75rem;
+      padding-bottom: 0.75rem;
+      padding-left: 0.5rem;
+    }
+
+    .select2-selection__choice{
+      padding: 0.25rem;
+      color: #fff;
+      margin: 0;
+      margin-right: 0.5rem;
+      background: @primary;
+      border-color: transparent;
+    }
+
+    .select2-selection__choice__remove{
+      color: #fff;
+      margin-right: 0.25rem;
+    }
+  }
+
+  .select2-results{
+      ul.select2-results__options{
+
+        .select2-results__option{
+          margin-bottom: 0;
+          padding: 1rem 1.5rem;
+          color: @text;
+        }
+
+        .select2-results__option--highlighted{
+            background: @primary;
+            color: #fff;
+        }
+
+        .select2-results__option[aria-selected=true]{
+          background: @back-gray;
+          color: @text;
+        }
+
+
+      }
+  }
+
+
+}
+
+.select2-container--default.select2-container--focus{
+  .select2-selection--multiple{
+    border-color: @primary;
+  }
+
+}
