@@ -57,7 +57,7 @@
         {{/if}}
       </li>
 
-      <li class="{{#if both (equals current_nav 'project') sub_nav}}current-sub{{else}}{{#if equals current_nav 'project'}}current{{/if}}  {{/if}}">
+      <li class="{{#if both (equals current_nav 'projects') sub_nav}}current-sub{{else}}{{#if equals current_nav 'projects'}}current{{/if}}  {{/if}} {{#if current_program}}has-sub-nav{{/if}}">
         <a href="{{pathFor 'projects' layout=getLayout}}">
           <span><ion-icon name="folder-open-outline"></ion-icon>Project</span>
         </a>
@@ -68,8 +68,59 @@
 
           <li class="current">
             <a href="{{pathFor 'projects.view' layout=getLayout}}" >
-              <span><ion-icon name="list-outline"></ion-icon>Programs</span>
+              <span><ion-icon name="list-outline"></ion-icon>Programs</span> {{#if current_program}}<ion-icon name="chevron-down-outline" class="nav-chevron"></ion-icon>{{/if}}
             </a>
+
+
+            {{#if current_program}}
+
+            <ul class="nav-list sub-nav">
+
+              <li class="{{#if current_program}}current{{/if}}">
+                <a href="#">
+                  <span><ion-icon name="bookmark-outline"></ion-icon>Overview</span>
+                </a>
+              </li>
+
+              <li>
+                <a href="#">
+                  <span><ion-icon name="podium-outline"></ion-icon>Participants</span>
+                </a>
+              </li>
+
+              <li>
+                <a href="#">
+                  <span><ion-icon name="documents-outline"></ion-icon>Workshops</span>
+                </a>
+              </li>
+
+              <li>
+                <a href="#">
+                  <span><ion-icon name="hourglass-outline"></ion-icon>Consulting items</span>
+                </a>
+              </li>
+
+              <li>
+                <a href="#">
+                  <span><ion-icon name="podium-outline"></ion-icon>Surveys</span>
+                </a>
+              </li>
+
+              <li>
+                <a href="#">
+                  <span><ion-icon name="mail-outline"></ion-icon>Email</span>
+                </a>
+              </li>
+
+              <li>
+                <a href="#">
+                  <span><ion-icon name="settings-outline"></ion-icon>Settings</span>
+                </a>
+              </li>
+            </ul>
+
+            {{/if}}
+
           </li>
 
 
