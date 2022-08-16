@@ -15,6 +15,8 @@ Template.styles.onRendered(function() {
     $('.select2-tags').select2({
       width: '100%',
       tags: true
+    }).on('select2:open', function(e){
+      $('.select2-search__field').attr('placeholder', 'Search...');
     });
 
 

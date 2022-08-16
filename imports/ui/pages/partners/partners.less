@@ -1,2 +1,86 @@
 @import '../../css/vars.less';
 @import '../../css/utils.less';
+
+.partners-holder{
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 1rem;
+  padding: 3rem 0;
+
+  .partner-card{
+
+    .card;
+    display: flex;
+    flex-direction: column;
+
+    margin: 0;
+
+    .card-body{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      flex: 1;
+      padding: 1rem;
+    }
+
+    .card-footer{
+      flex: 0;
+      background: @back-gray;
+      transition: all 200ms;
+      padding: 0;
+
+      a{
+        color: @text;
+        font-weight: 700;
+        display: block;
+        padding: 1rem;
+        width: 100%;
+
+      }
+    }
+
+    .card-footer:hover{
+      background: @gray;
+    }
+
+
+    img.profile-pic{
+
+    }
+
+    h3.partner-name{
+      margin: 0.5rem;
+    }
+
+    span.partner-role{
+      display: block;
+      margin-bottom: 1rem;
+      font-size: 1.2rem;
+      font-weight: 600;
+    }
+
+    h4.partner-organisation{
+
+    }
+
+    img.partner-logo{
+
+      width: 8rem;
+      max-width: 8rem;
+      max-height: 3rem;
+    }
+
+    h4.partner-organisation{
+      margin: 0;
+    }
+
+    .button{
+      text-align: center;
+      width: 100%;
+    }
+  }
+
+}

@@ -1,121 +1,92 @@
 <template name='partners'>
 
-
   <div class="content-section top">
     <div class="content-section-title-holder">
-      <h1 class="content-section-title">Partners</h1>
+      <h1 class="content-section-title">Partner Network</h1>
     </div>
   </div>
   <div class="content-action-bar">
 
     <div class="left">
-      <ul class="tab-buttons">
-        <li class="current">
-          <a href="#">Active</a>
-        </li>
-        <li>
-          <a href="#">Complete</a>
-        </li>
-      </ul>
 
-      <div class="input-row with-icon search-input">
-        <i class="fa fa-search"></i>
-        <input type="text" placeholder="Search job number, name...">
+      <div class="input-row with-icon search-input filter-input">
+        <span>
+          <ion-icon name="filter-circle-outline"></ion-icon>Filter
+        </span>
+        <select class="select2-tags" name="state" multiple="multiple">
+          <optgroup label="Industry">
+            <option>Financial services</option>
+            <option>Health</option>
+            <option>Financial services</option>
+          </optgroup>
+          <optgroup label="Location">
+            <option>Western Australia</option>
+            <option>New South Whales</option>
+            <option>Tasmania</option>
+          </optgroup>
+          <optgroup label="Qualifications">
+            <option>360 Accredidation</option>
+            <option>Lean Six Sigma</option>
+            <option>Prince2</option>
+          </optgroup>
+          <optgroup label="Service">
+            <option>Coaching</option>
+            <option>Facilitation</option>
+            <option>RTO</option>
+            <option>Training</option>
+          </optgroup>
+          <optgroup label="Topic">
+            <option>Design thinking</option>
+            <option>Health</option>
+            <option>Financial services</option>
+          </optgroup>
+        </select>
       </div>
 
-    </div>
-
-    <div class="right">
-        <a href="/" class="button">New project</a>
-    </div>
-
-  </div>
-
-  <table class="styled" id="projectTable">
-    <thead>
-      <tr>
-        <th class="w125">Job Number</th>
-        <th class="">Project Name</th>
-        <th class="">Company</th>
-        <th class="">Program Name</th>
-        <th class="w125 align-center">Start Date</th>
-        <th class="w125 align-center">End Date</th>
-        <th class="w75 align-center">Status</th>
-
-        <th style="width: 140px;">
-
-        </th>
-      </tr>
-
-    </thead>
-    <tbody id="tblProgramsBody">
-      <tr class="rowData" data-rowlink-id="9094" tabindex="0">
-        <td data-fieldname="ProgramJobNumber">J002909</td>
-        <td data-fieldname="ProjectJobName"><strong>Test Project</strong></td>
-        <td data-fieldname="CompanyName">Skills of the Modern Age</td>
-        <td data-fieldname="ProgramJobName">Program 2</td>
-        <td data-fieldname="ProgramStartDateUtc" data-isutcdate="true" data-format="D MMM YYYY">18 May 2022</td>
-        <td data-fieldname="ProgramEndDateUtc" data-isutcdate="true" data-format="D MMM YYYY">16 Aug 2022</td>
-        <td data-fieldname="ProgramStatus" class="skinny"><span class="badge blue">Setup</span></td>
-
-        <td class="button-list">
-          <a href="#" class="square-button" data-tooltip="View"><ion-icon name="search-outline"></ion-icon></a>
-          <a href="#" class="square-button" data-tooltip="Edit"><ion-icon name="create-outline"></ion-icon></a>
-          <a href="#" class="square-button" data-tooltip="Remove"><ion-icon name="trash-outline"></ion-icon></a>
-
-        </td>
-      </tr>
-      <tr class="rowData" data-rowlink-id="9060" tabindex="0">
-        <td data-fieldname="ProgramJobNumber">J002894</td>
-        <td data-fieldname="ProjectJobName"><strong>TAble UX Review</strong></td>
-        <td data-fieldname="CompanyName">Integral (Internal)</td>
-        <td data-fieldname="ProgramJobName">Program 1</td>
-        <td data-fieldname="ProgramStartDateUtc" data-isutcdate="true" data-format="D MMM YYYY">10 May 2022</td>
-        <td data-fieldname="ProgramEndDateUtc" data-isutcdate="true" data-format="D MMM YYYY">8 Aug 2022</td>
-        <td data-fieldname="ProgramStatus" class="skinny"><span class="badge green">In progress</span></td>
-
-        <td class="button-list">
-          <a href="#" class="square-button" data-tooltip="View"><ion-icon name="search-outline"></ion-icon></a>
-          <a href="#" class="square-button" data-tooltip="Edit"><ion-icon name="create-outline"></ion-icon></a>
-          <a href="#" class="square-button" data-tooltip="Remove"><ion-icon name="trash-outline"></ion-icon></a>
-
-        </td>
-      </tr>
-
-      <tr class="rowData" data-rowlink-id="9060" tabindex="0">
-        <td data-fieldname="ProgramJobNumber">J002894</td>
-        <td data-fieldname="ProjectJobName"><strong>A new project</strong></td>
-        <td data-fieldname="CompanyName">Integral (Internal)</td>
-        <td data-fieldname="ProgramJobName">Program 1</td>
-        <td data-fieldname="ProgramStartDateUtc" data-isutcdate="true" data-format="D MMM YYYY">10 May 2022</td>
-        <td data-fieldname="ProgramEndDateUtc" data-isutcdate="true" data-format="D MMM YYYY">8 Aug 2022</td>
-        <td data-fieldname="ProgramStatus" class="skinny"><span class="badge warning">Cancelled</span></td>
-
-        <td class="button-list">
-          <a href="#" class="square-button" data-tooltip="View"><ion-icon name="search-outline"></ion-icon></a>
-          <a href="#" class="square-button" data-tooltip="Edit"><ion-icon name="create-outline"></ion-icon></a>
-          <a href="#" class="square-button" data-tooltip="Remove"><ion-icon name="trash-outline"></ion-icon></a>
-
-        </td>
-      </tr>
-
-    </tbody>
-  </table>
-
-  <div class="table-bottom">
-
-    <div class="left">
-      <span class="badge found-badge">2 results</span>
+      <!--<div class="input-row with-icon search-input">
+        <i class="fa fa-search"></i>
+        <input type="text" placeholder="Search job number, name...">
+      </div>-->
 
     </div>
 
     <div class="right">
-
-      <a href="#" class="button white pagination-button">Prevous</a>
-      <a href="#" class="button white pagination-button">Next</a>
     </div>
 
   </div>
 
+  <div class="partners-holder">
+    {{#each partners}}
+
+      <div class="partner-card ">
+        <div class="card-body">
+
+          <div class="user-avatar" style="background-image: url({{profile_pic}})"> </div>
+          <h3 class="partner-name">{{name}}</h3>
+          <span class="partner-role">{{role}}</span>
+          <!--{{#each tags}}
+          <ul>
+            <li>
+              {{this}}
+            </li>
+          </ul>
+          {{/each}}-->
+          {{#if logo}}
+            <img class="partner-logo" src="{{logo}}" />
+          {{else}}
+            <h4 class="partner-organisation">{{organisation}}</h4>
+          {{/if}}
+
+        </div>
+
+        <div class="card-footer">
+          <a href="#">View profile</a>
+
+        </div>
+
+      </div>
+
+    {{/each}}
+  </div>
 
 </template>

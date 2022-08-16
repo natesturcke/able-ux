@@ -448,6 +448,10 @@ select {
       color: #fff;
       margin-right: 0.25rem;
     }
+
+    .select2-selection__choice__remove:hover{
+      color: #fff;
+    }
   }
 
   .select2-results{
@@ -480,5 +484,40 @@ select {
   .select2-selection--multiple{
     border-color: @primary;
   }
+}
+
+.input-row.with-icon.search-input.filter-input{
+  padding: 0.25rem;
+  padding-left: 0.5rem;
+  width: 500px;
+
+  > span{
+    display: flex;
+    align-items: center;
+    flex: 0;
+    padding-right: 0.5rem;
+    ion-icon{
+      font-size: 1.5rem;
+      display: block;
+      margin-right: 0.25rem;
+    }
+  }
+  .select2-container{
+    flex: 1;
+    padding-right: 0;
+
+    .selection{
+      width: 100%;
+      background: @back-gray;
+
+      .select2-selection.select2-selection--multiple{
+        border-color: transparent;
+        background: transparent;
+
+        border-radius: 0.5rem;
+      }
+    }
+  }
+
 
 }
