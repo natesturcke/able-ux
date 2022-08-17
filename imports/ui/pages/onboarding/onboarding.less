@@ -1,0 +1,62 @@
+@import '../../css/vars.less';
+@import '../../css/utils.less';
+
+.onboard-wrapper{
+
+  background: @back-gray;
+  min-height: 100vh;
+  padding: 6rem 2rem;
+
+  .register-form{
+
+    max-width: 700px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 0.5rem;
+    padding: 2rem;
+    background: #fff;
+
+
+    .able-logo{
+      width: 5rem;
+    }
+
+    .invite-holder{
+      display: flex;
+      background: @back-gray;
+      border-radius: 2rem;
+      margin: 2rem 0;
+      padding: 2rem;
+
+
+      .user-avatar{
+        flex: 0 0 auto;
+        border: 1rem solid @gray;
+        width: 8rem;
+        height: 8rem;
+      }
+
+      .invite-text-holder{
+        flex: 1;
+        padding-left: 2rem;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+
+        h1{
+          font-size: 1.5rem;
+          margin: 0;
+          margin-bottom: 1rem;
+        }
+
+        h3{
+          font-size: 1rem;
+          margin: 0;
+          color: @text;
+        }
+
+      }
+    }
+
+  }
+}

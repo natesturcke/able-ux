@@ -24,6 +24,8 @@ import '../imports/ui/pages/quotes/new_quote.js';
 
 import '../imports/ui/pages/coachees/coachees.js';
 
+import '../imports/ui/pages/onboarding/register.js';
+import '../imports/ui/pages/onboarding/onboarding.js';
 
 
 
@@ -41,6 +43,13 @@ FlowRouter.route('/styles/', {
   },
 });
 
+
+FlowRouter.route('/register/', {
+  name: 'register',
+  action() {
+    BlazeLayout.render('layout_blank', { main: 'register' });
+  },
+});
 
 
 FlowRouter.route('/projects/', {

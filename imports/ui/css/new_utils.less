@@ -330,7 +330,7 @@ p.notification{
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  border: 1px solid @gray;
+  border: 1px solid @border;
   box-shadow: 1px 2px 2px rgba(0, 0, 100, 0.05);
   padding: 0.5rem;
   border-radius: 0.5rem;
@@ -406,9 +406,107 @@ p.notification{
 }
 
 
+.table-menu{
+  padding: 0.5rem 0;
+  display: flex;align-items: center;
+  border-top: 1px solid @gray;
+
+  .sort-by-holder, .filter-by-holder{
+    display: flex;
+    border-radius: 0.5rem;
+    align-items: center;
+    background: @back-gray;
+    padding: 0.5rem;
+    margin-right: 0.5rem;
+
+
+    select{
+      border-color: transparent;
+      font-size: 1rem;
+      background: @gray;
+      padding: 0.25rem 0.5rem;
+      border-radius: 0.5rem;
+    }
+
+    .direction-holder{
+      display: block;
+      font-size: 1.25rem;
+      background: @gray;
+      padding: 0.25rem;
+      border-radius: 0.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+
+    .direction-holder:hover, select:hover{
+      background: darken(@gray, 5%);
+    }
+  }
+
+  .sort-by-holder{
+    select{
+      margin-left: 0.5rem;
+      margin-right: 0.25rem;
+    }
+  }
+
+  .filter-by-holder{
+    span{
+      display: inline-block;
+      padding: 0.25rem 0.5rem;
+    }
+  }
+
+  .add-filter{
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+
+
+
+}
+
+.table-actions{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-right: 1rem;
+  margin-left: 0.5rem;
+
+  li {
+    display: inline-block;
+    margin-left: 1rem;
+    padding: 0;
+    margin: 0;
+
+      a {
+        color: @text;
+        padding: 0.5rem;
+        border-radius: 0.5rem;
+        background: @back-gray;
+        display: flex;
+        align-items: center;
+
+        ion-icon{
+          margin-right: 0.5rem;
+          font-size: 1.25rem;
+          display: inline-block;
+        }
+      }
+
+      a:hover{
+        color: @primary;
+
+
+      }
+  }
+}
+
 table.styled{
 
-	border-collapse: collapse;
+	border-collapse: seperate;
 	max-width: 100%;
 	width: 100%;
 	margin: 0;
@@ -416,7 +514,9 @@ table.styled{
   background: #fff;
   box-shadow: @shadow;
   border: 1px solid @border;
-  overflow: hidden;
+
+
+
 
 
 	th, td{
@@ -833,7 +933,7 @@ table.styled{
 
 .input-row.with-icon{
 
-  border: 1px solid @gray;
+  border: 1px solid @border;
   padding: 0;
   display: flex;
   align-items: center;

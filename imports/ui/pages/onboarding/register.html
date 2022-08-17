@@ -1,0 +1,77 @@
+<template name='register'>
+
+  <div class="onboard-wrapper">
+
+    <div class="register-form">
+
+
+
+
+
+    <img src="/images/able.svg" alt="able-logo-with-text" class="able-logo">
+
+    <div class="invite-holder">
+      <div class="user-avatar" style="background-image: url(/images/users/jeroen.png)"> </div>
+      <div class="invite-text-holder">
+        <h1><span class="invite-name">Jeron van Dalen</span> has invited you to the join the Able platform.</h1>
+        <h3>Join the platform by registering below.</h3>
+      </div>
+
+
+    </div>
+
+
+
+
+
+    <form>
+
+      <div class="form-row">
+        <label>Your name*</label>
+        <div class="input-multi">
+          <input type="text" placeholder="First name" required />
+          <input type="text" placeholder="Last name" required />
+
+        </div>
+      </div>
+
+      <div class="form-row">
+        <label>Company name*</label>
+          <input type="text" placeholder="Company name" required />
+      </div>
+
+      <div class="form-row">
+        <label>Email*</label>
+          <input type="text" placeholder="john.smith@email.com" value="" required />
+      </div>
+
+      <div class="form-row">
+        <div class="label-holder">
+          <label>Password*</label>
+          <span class="label-description">Password must be at leats 8 characters long and include an alphanumeric character.</span>
+
+        </div>
+          <input type="password" value="" required />
+      </div>
+
+      <div class="form-row">
+        <label>Repeat password*</label>
+          <input type="password" value="" required />
+      </div>
+
+      <div class="form-submit-holder">
+        <input type="submit" class="button" value="Register" />
+      </div>
+
+
+
+      <span class="form-footer">By registering you agree to our <a href="#">privacy policy</a> and <a href="#">terms of use</a></span>
+
+
+    </form>
+
+    </div>
+
+  </div>
+
+</template>

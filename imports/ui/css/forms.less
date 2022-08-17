@@ -3,6 +3,9 @@
 /***** forms ******/
 
 form {
+  display: flex;
+  flex-direction: column;
+
   .warning-message {
     color: @error-text;
     display: none;
@@ -13,6 +16,31 @@ form {
     color: @success;
     display: none;
     margin-bottom: 1rem;
+  }
+
+  > button{
+    display: flex;
+    align-self: flex-end;
+  }
+
+  span.form-footer{
+    display: inline-block;
+    font-size: 0.8rem;
+    color: @dark-gray;
+    opacity: 0.8;
+    text-align: center;
+    margin-top: 2rem;
+    width: 100%;
+
+    a{
+      color: @text;
+    }
+  }
+
+  .form-submit-holder{
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
   }
 }
 
@@ -61,8 +89,10 @@ form {
 
     span.label-description{
       display: block;
-      width: 100%;
+      width: 90%;
       font-weight: normal;
+      font-size: 0.8rem;
+      opacity: 0.6;
     }
   }
 
@@ -106,6 +136,8 @@ form {
     font-weight: normal;
   }
 }
+
+
 
 .form-row.standout{
   border-radius: 1rem;
@@ -183,7 +215,7 @@ form {
   display: flex;
   width: 100%;
   border-radius: 0.5rem;
-  border: 1px solid @gray;
+  border: 1px solid @border;
   overflow: hidden;
 
   input {
@@ -301,12 +333,13 @@ select::-ms-expand {
 .input-multi {
   display: flex;
   border-radius: @border-radius;
-  border: 1px solid @gray;
+  border: 1px solid @border;
   overflow: hidden;
   transition: all 400ms;
 
   > input {
-    flex: 1 1 auto;
+    flex: 1 1 50%;
+    width: 50%;
     display: inline-block;
     border: 0;
     border-radius: 0;
@@ -399,7 +432,7 @@ select {
     }
 
     .select2-search__field:focus, .select2-search__field:active{
-      border-color: @gray !important;
+      border-color: @border !important;
     }
   }
 
