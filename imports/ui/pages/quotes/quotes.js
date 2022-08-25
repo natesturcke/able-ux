@@ -9,7 +9,7 @@ Template.quotes.onRendered(function() {
 
 Template.quotes.onCreated(function() {
 
-  this.showTableMenu = new ReactiveVar(false);
+  this.showTableMenu = new ReactiveVar(true);
 
 
 });

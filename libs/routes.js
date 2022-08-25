@@ -14,6 +14,9 @@ import '../imports/ui/components/project_nav/project_nav.js';
 import '../imports/ui/pages/projects/project_home.js';
 import '../imports/ui/pages/programs/program_home.js';
 import '../imports/ui/pages/partners/partners.js';
+import '../imports/ui/pages/partners/partners_striped.js';
+import '../imports/ui/components/profile/profile.js';
+
 
 import '../imports/ui/components/dashboard_nav/dashboard_nav.js';
 
@@ -25,7 +28,8 @@ import '../imports/ui/pages/quotes/new_quote.js';
 import '../imports/ui/pages/coachees/coachees.js';
 
 import '../imports/ui/pages/onboarding/register.js';
-import '../imports/ui/pages/onboarding/onboarding.js';
+import '../imports/ui/pages/onboarding/onboarding.js'
+;
 
 
 
@@ -93,10 +97,24 @@ FlowRouter.route('/quotes/new/:quote_section', {
 
 
 
+FlowRouter.route('/partner-network-alt/', {
+  name: 'partners_alt',
+  action() {
+    BlazeLayout.render('layout_app', { main: 'partners'});
+  },
+});
+
 FlowRouter.route('/partner-network/', {
   name: 'partners',
   action() {
-    BlazeLayout.render('layout_app', { main: 'partners' });
+    BlazeLayout.render('layout_app', { main: 'partners_striped'});
+  },
+});
+
+FlowRouter.route('/partner-network/:partner_id', {
+  name: 'partners.profile',
+  action() {
+    BlazeLayout.render('layout_app', { main: 'partners_striped', slideout: 'profile', slideout_title: "Partner profile" });
   },
 });
 

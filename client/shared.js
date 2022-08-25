@@ -13,6 +13,11 @@ Template.registerHelper('current_program', function() {
   return FlowRouter.getParam("program_name");
 });
 
+Template.registerHelper('current_profile', function() {
+  return FlowRouter.getParam("partner_id");
+});
+
+
 Template.registerHelper('getLayout', function() {
   return FlowRouter.getParam("layout");
 });

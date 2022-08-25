@@ -1,92 +1,106 @@
 <template name='partners'>
+  <div id="partners">
 
-  <div class="content-section top">
-    <div class="content-section-title-holder">
-      <h1 class="content-section-title">Partner Network</h1>
-    </div>
-  </div>
-  <div class="content-action-bar">
-
-    <div class="left">
-
-      <div class="input-row with-icon search-input filter-input">
-        <span>
-          <ion-icon name="filter-circle-outline"></ion-icon>Filter
-        </span>
-        <select class="select2-tags" name="state" multiple="multiple">
-          <optgroup label="Industry">
-            <option>Financial services</option>
-            <option>Health</option>
-            <option>Financial services</option>
-          </optgroup>
-          <optgroup label="Location">
-            <option>Western Australia</option>
-            <option>New South Whales</option>
-            <option>Tasmania</option>
-          </optgroup>
-          <optgroup label="Qualifications">
-            <option>360 Accredidation</option>
-            <option>Lean Six Sigma</option>
-            <option>Prince2</option>
-          </optgroup>
-          <optgroup label="Service">
-            <option>Coaching</option>
-            <option>Facilitation</option>
-            <option>RTO</option>
-            <option>Training</option>
-          </optgroup>
-          <optgroup label="Topic">
-            <option>Design thinking</option>
-            <option>Health</option>
-            <option>Financial services</option>
-          </optgroup>
-        </select>
-      </div>
-
-      <!--<div class="input-row with-icon search-input">
-        <i class="fa fa-search"></i>
-        <input type="text" placeholder="Search job number, name...">
-      </div>-->
-
-    </div>
-
-    <div class="right">
-    </div>
-
-  </div>
-
-  <div class="partners-holder">
-    {{#each partners}}
-
-      <div class="partner-card ">
-        <div class="card-body">
-
-          <div class="user-avatar" style="background-image: url({{profile_pic}})"> </div>
-          <h3 class="partner-name">{{name}}</h3>
-          <span class="partner-role">{{role}}</span>
-          <!--{{#each tags}}
-          <ul>
-            <li>
-              {{this}}
-            </li>
-          </ul>
-          {{/each}}-->
-          {{#if logo}}
-            <img class="partner-logo" src="{{logo}}" />
-          {{else}}
-            <h4 class="partner-organisation">{{organisation}}</h4>
-          {{/if}}
-
+    <div class="content-section top">
+      <div class="content-section-title-holder">
+        <h1 class="content-section-title">Partner Network</h1>
+        <div class="input-row with-icon search-input filter-input">
+          <span>
+            <ion-icon name="filter-circle-outline"></ion-icon>Filter
+          </span>
+          <select class="select2-tags" name="state" multiple="multiple">
+            <optgroup label="Industry">
+              <option>Financial services</option>
+              <option>Health</option>
+              <option>Financial services</option>
+            </optgroup>
+            <optgroup label="Location">
+              <option>Western Australia</option>
+              <option>New South Whales</option>
+              <option>Tasmania</option>
+            </optgroup>
+            <optgroup label="Qualifications">
+              <option>360 Accredidation</option>
+              <option>Lean Six Sigma</option>
+              <option>Prince2</option>
+            </optgroup>
+            <optgroup label="Service">
+              <option>Coaching</option>
+              <option>Facilitation</option>
+              <option>RTO</option>
+              <option>Training</option>
+            </optgroup>
+            <optgroup label="Topic">
+              <option>Design thinking</option>
+              <option>Health</option>
+              <option>Financial services</option>
+            </optgroup>
+          </select>
         </div>
-
-        <div class="card-footer">
-          <a href="#">View profile</a>
-
-        </div>
-
       </div>
+    </div>
 
-    {{/each}}
-  </div>
+
+
+    <div class="partners-holder">
+
+
+      {{#each partners}}
+
+        <a href="{{pathFor 'partners.profile' partner_id='nate'}}" class="partner-card {{#if current_profile}}show-profile{{/if}}">
+
+          <div class="partner-image-holder">
+            <div class="user-avatar" style="background-image: url({{profile_pic}})"> </div>
+          </div>
+
+          <div class="card-body">
+
+            <h3 class="partner-name">{{name}}</h3>
+            <span class="partner-role">{{role}}</span>
+
+            <span class="partner-organisation">{{organisation}}</span>
+
+            <span class="partner-location badge  white">
+              <ion-icon name="earth-outline"></ion-icon>{{location}}
+            </span>
+            <span class="partner-experience badge white flat"><span>Experience:</span>{{experience}}</span>
+
+            <ul class="tags-list tags">
+
+              {{#each service}}
+                <li>
+                  <span class="badge small {{#if equals this 'Consulting'}}blue{{/if}} {{#if equals this 'Facilitation'}}green{{/if}} {{#if equals this 'RTO'}}warning{{/if}}">{{this}}</span>
+                </li>
+              {{/each}}
+
+            </ul>
+
+            <ul class="tags-list tags">
+
+              {{#each qualifications}}
+                <li>
+                  <span class="badge small">{{this}}</span>
+                </li>
+              {{/each}}
+
+            </ul>
+
+            <ul class="tags-list tags">
+
+              {{#each topics}}
+                <li>
+                  <span class="badge white small flat">{{this}}</span>
+                </li>
+              {{/each}}
+
+            </ul>
+
+          </div>
+
+        </a>
+
+      {{/each}}
+    </div>
+    </div>
 
 </template>

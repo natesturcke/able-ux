@@ -24,6 +24,15 @@ Template.layout_app.helpers({
 });
 
 Template.layout_app.events({
+  'click .slide-out-nav-button'(event, template){
+    event.preventDefault();
+
+    history.back();
+  },
+  'click .slide-out-back'(event, template){
+    event.preventDefault();
+
+    history.back();
+  }
 
 });
-'layout_app.less'

@@ -48,7 +48,7 @@
     <div class="table-menu">
 
       <div class="sort-by-holder">
-        <span>Sort by</span>
+        <label>Sort by</label>
         <select>
           <option>Nothing</option>
           <option>Company</option>
@@ -62,25 +62,33 @@
         </div>
       </div>
 
-      <div class="filter-by-holder">
-        <select>
-          <option>Company</option>
-          <option>Project number</option>
-          <option>Created</option>
-          <option selected=selected>Status</option>
-          <option>Closed out</option>
-        </select>
-        <span>is</span>
-        <select>
-          <option>Draft</option>
-          <option>Active</option>
-          <option>Accepted</option>
-        </select>
+      <div class="filter-holder">
+
+        <label>Filter by</label>
+
+        <div class="filter-by-holder">
+          <select>
+            <option>Company</option>
+            <option>Project number</option>
+            <option>Created</option>
+            <option selected=selected>Status</option>
+            <option>Closed out</option>
+          </select>
+          <span>is</span>
+          <select>
+            <option>Draft</option>
+            <option>Active</option>
+            <option>Accepted</option>
+          </select>
+        </div>
+
+        <span class="add-filter button white tiny">
+          <ion-icon name="add-circle-outline"></ion-icon> Add filter
+        </span>
+
       </div>
 
-      <span class="add-filter button white tiny">
-        <ion-icon name="add-circle-outline"></ion-icon> Add filter
-      </span>
+
 
     </div>
 
