@@ -1,0 +1,202 @@
+<template name='program_workshops'>
+
+  <div class="program-holder">
+
+    <div class="program-content">
+
+      <div class="content-section top">
+
+        <div class="bread-crumbs">
+          <a href="#" class="company-name">Integral</a>
+          <ion-icon name="chevron-forward-outline"></ion-icon>
+          <a href="{{pathFor 'projects.view' layout=getLayout}}" class="projetct-name">Test Project</a>
+          <ion-icon name="chevron-forward-outline"></ion-icon>
+          <a href="{{pathFor 'projects.view' layout=getLayout}}" class="projetct-name">Example Program</a>
+          <ion-icon name="chevron-forward-outline"></ion-icon>
+          <span>Workshops</span>
+        </div>
+
+        <div class="content-section-title-holder">
+          <h1 class="content-section-title">Workshops</h1>
+        </div>
+      </div>
+
+      <div class="content-action-bar">
+
+        <div class="left">
+          <ul class="tab-buttons">
+            <li class="current">
+              <a href="#">Confirmed</a>
+            </li>
+            <li>
+              <a href="#">Unconfirmed</a>
+            </li>
+          </ul>
+
+          <div class="input-row with-icon search-input">
+            <i class="fa fa-search"></i>
+            <input type="text" placeholder="Search workshop name, number...">
+          </div>
+
+        </div>
+
+        <div class="right">
+          <ul class="table-actions">
+            <li>
+              <a href="#" class="show-sort-menu">
+                <ion-icon name="arrow-down-outline"></ion-icon>Sort
+              </a>
+            </li>
+
+            <li>
+              <a href="#">
+                <ion-icon name="funnel-outline"></ion-icon>Filter
+              </a>
+            </li>
+          </ul>
+          <a href="{{pathFor 'quotes.new' quote_section='details'}}" class="button">Add workshop</a>
+        </div>
+
+      </div>
+
+      <div class="content-section spaced">
+
+        <table class="styled">
+          <thead>
+            <tr>
+              <th class="">Name</th>
+              <th class="">Date</th>
+              <th>Type</th>
+              <th class="">Facilitator</th>
+              <th class="">Status</th>
+              <th class="">Quote item</th>
+              <th>Last evaluation</th>
+              <th></th>
+            </tr>
+
+          </thead>
+          <tbody>
+
+            <tr>
+
+              <td class="padded-elems skinny">
+                <strong>Group Session 3: Leadership & Team</strong>
+                <span>Module Name (WorkshopID123)</span>
+              </td>
+              <td class="skinny">
+                <span>Mon, 21st Feb 2022</span><br />
+                <span>6:00pm - 10:00pm</span>
+              </td>
+              <td>
+                <span class="badge">Face to face</span>
+              </td>
+
+              <td class="skinny">
+                <a href="#" class="user-horizontal">
+                  <div class="user-avatar" style="background-image: url(/images/users/jeroen.png)"> </div>
+                  <div class="user-details">
+                    <span class="user-name">Jeroen van Dalen</span>
+                    <span class="user-email">jeroen@gmail.com</span>
+
+                  </div>
+                </a>
+              </td>
+              <td class="skinny">
+                <span class="badge green">Confirmed</span>
+              </td>
+              <td class="padded-elems">
+                <span class="badge">Yes</span>
+              </td>
+              <td>
+                23rd Feb 2022
+              </td>
+
+              <td class="button-list">
+                <a href="{{pathFor 'projects.program.workshops.book' program_name='test_project'}}" class="button tiny">
+                  <ion-icon name="calendar-clear-outline"></ion-icon>
+                  Book
+                </a>
+                <a href="#" class="square-button" data-tooltip="View">
+                  <ion-icon name="search-outline"></ion-icon>
+                </a>
+                <a href="#" class="square-button" data-tooltip="Edit">
+                  <ion-icon name="create-outline"></ion-icon>
+                </a>
+                <a href="#" class="square-button" data-tooltip="Remove">
+                  <ion-icon name="trash-outline"></ion-icon>
+                </a>
+              </td>
+            </tr>
+
+            <tr>
+
+              <td class="padded-elems skinny">
+                <strong>Group Session 4: Vision</strong>
+                <span>Another modile (WorkshopID125)</span>
+              </td>
+              <td class="skinny">
+                <span>Tues, 27st Feb 2022</span><br />
+                <span>10:00am - 2:00pm</span>
+              </td>
+              <td>
+                <span class="badge">Online</span>
+              </td>
+
+              <td class="skinny">
+                <a href="#" class="user-horizontal">
+                  <div class="user-avatar" style="background-image: url(/images/users/u2.png)"> </div>
+                  <div class="user-details">
+                    <span class="user-name">Donald Don</span>
+                    <span class="user-email">don@gmail.com</span>
+
+                  </div>
+                </a>
+              </td>
+              <td class="skinny">
+                <span class="badge warning">Unconfirmed</span>
+              </td>
+              <td class="padded-elems">
+                <span class="badge">No</span>
+              </td>
+              <td>
+
+              </td>
+
+              <td class="button-list">
+                <a href="{{pathFor 'projects.program.workshops.book' program_name='test_project'}}" class="button tiny">
+                  <ion-icon name="calendar-clear-outline"></ion-icon>
+                  Book
+                </a>
+                <a href="#" class="square-button" data-tooltip="View">
+                  <ion-icon name="search-outline"></ion-icon>
+                </a>
+                <a href="#" class="square-button" data-tooltip="Edit">
+                  <ion-icon name="create-outline"></ion-icon>
+                </a>
+                <a href="#" class="square-button" data-tooltip="Remove">
+                  <ion-icon name="trash-outline"></ion-icon>
+                </a>
+              </td>
+            </tr>
+          </tbody>
+
+        </table>
+
+        <div class="table-bottom">
+          <div class="left">
+            <span class="badge found-badge">2 results</span>
+          </div>
+          <div class="right">
+            <a href="#" class="button white pagination-button">Prevous</a>
+            <a href="#" class="button white pagination-button">Next</a>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</template>

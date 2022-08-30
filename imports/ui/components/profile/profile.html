@@ -1,0 +1,132 @@
+<template name='profile'>
+
+
+  <div class="profile-full">
+
+    <div class="details-holder">
+      <div class="user-avatar" style="background-image: url({{profile.profile_pic}})"> </div>
+
+      <h3 class="profile-name">{{profile.name}}</h3>
+      <span class="profile-role">{{profile.role}}</span>
+    </div>
+
+      <div class="bio">
+
+        <p>Cornhole leggings blog literally, you probably haven't heard of them edison bulb taxidermy chillwave readymade. Artisan aesthetic kombucha cloud bread vibecession heirloom migas slow-carb godard post-ironic meh.
+        </p>
+        <p>
+          Gluten-free chia taiyaki, pinterest kale chips green juice cliche normcore stumptown adaptogen iPhone XOXO mukbang hashtag hell of.
+        </p>
+
+        <p>
+          Plaid put a bird on it truffaut ethical cloud bread kinfolk, next level tilde meditation helvetica bitters pinterest stumptown thundercats. Neutra forage man bun, fashion axe brunch adaptogen farm-to-table. Salvia hot chicken yuccie celiac
+          forage vibecession.
+        </p>
+
+      </div>
+
+      <div class="tag-row-holder">
+
+
+        <div class="tag-row">
+          <label>
+            <ion-icon name="mail-outline"></ion-icon>Email
+          </label>
+          <span>{{profile.email}}</span>
+
+        </div>
+
+        <div class="tag-row">
+          <label>
+            <ion-icon name="call-outline"></ion-icon>Phone
+          </label>
+          <span>{{profile.phone}}</span>
+
+        </div>
+
+        <div class="tag-row top">
+          <label>
+            <ion-icon name="business-outline"></ion-icon>Organisation
+          </label>
+          <div class="company-details">
+            <img src="{{profile.logo}}" class="organisation-logo" />
+            <span class="organisation-name">{{profile.organisation}}</span>
+            <span class="organisation-phone"><ion-icon name="call-outline"></ion-icon>{{profile.organisation_phone}}</span>
+            <span class="organisation-email"><ion-icon name="mail-outline"></ion-icon> {{profile.organisation_email}}</span>
+
+            <span class="organisation-website"><ion-icon name="earth-outline"></ion-icon>{{profile.organisation_website}}</span>
+            <span class="organisation-abn"><label>ABN: </label>{{profile.organisation_abn}}</span>
+
+
+          </div>
+
+        </div>
+
+
+        <div class="tag-row">
+          <label>
+            <ion-icon name="earth-outline"></ion-icon>Location
+          </label>
+          <span>{{profile.location}}</span>
+
+        </div>
+
+        <div class="tag-row">
+          <label>
+            <ion-icon name="bar-chart-outline"></ion-icon>Experience
+          </label>
+          <span>{{profile.experience}}</span>
+
+        </div>
+
+        <div class="tag-row">
+          <label>
+            <ion-icon name="cube-outline"></ion-icon>Services
+          </label>
+          <ul class="tags-list tags">
+
+            {{#each profile.service}}
+              <li>
+                <span class="badge small {{#if equals this 'Consulting'}}blue{{/if}} {{#if equals this 'Facilitation'}}green{{/if}} {{#if equals this 'RTO'}}warning{{/if}}">{{this}}</span>
+              </li>
+            {{/each}}
+
+          </ul>
+
+        </div>
+
+        <div class="tag-row">
+          <label>
+            <ion-icon name="school-outline"></ion-icon>Qualifications
+          </label>
+          <ul class="tags-list tags">
+
+            {{#each profile.qualifications}}
+              <li>
+                <span class="badge small">{{this}}</span>
+              </li>
+            {{/each}}
+
+          </ul>
+        </div>
+
+        <div class="tag-row">
+          <label>
+            <ion-icon name="cube-outline"></ion-icon>Topics
+          </label>
+          <ul class="tags-list tags">
+
+            {{#each profile.topics}}
+              <li>
+                <span class="badge white small flat">{{this}}</span>
+              </li>
+            {{/each}}
+
+          </ul>
+        </div>
+
+      </div>
+
+    </div>
+
+</template>

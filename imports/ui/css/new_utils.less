@@ -355,6 +355,28 @@ p.notification{
   > * {
     margin-left: 0.5rem;
   }
+
+	.button.tiny{
+		padding: 0.5rem;
+	}
+}
+
+td.button-list{
+	height: 100%;
+}
+
+.padded-elems{
+	> * {
+		margin-bottom: 0.25rem;
+	}
+
+	> span{
+		display: block;
+	}
+
+	> *:last-child{
+		margin-bottom: 0;
+	}
 }
 
 .square-button{
@@ -384,8 +406,9 @@ p.notification{
   ion-icon{
     color: @primary;
   }
-
 }
+
+
 
 
 .user-horizontal{
@@ -892,6 +915,7 @@ table.styled{
       border-bottom: 0px;
       transition: all 200ms;
       align-items: center;
+			border-bottom: 3px solid transparent;
 
       .step-nav-complete{
         flex: 0 0 2rem;
@@ -945,6 +969,7 @@ table.styled{
 
   >li:hover{
     > a{
+
       border-bottom: 3px solid @border;
     }
   }
@@ -1002,7 +1027,7 @@ table.styled{
   padding: 0;
   display: flex;
   align-items: center;
-  padding: 0 0 0 1.4rem;
+  padding: 0 0 0 1rem;
   overflow: hidden;
   border-radius: @border-radius;
   transition: 200ms all;
@@ -1021,6 +1046,7 @@ table.styled{
     padding-top: 0.8rem;
     padding-bottom: 0.8rem;
     padding-right: 0;
+		padding-left: 0.75rem;
   }
 
   input:focus, input:active{

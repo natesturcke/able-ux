@@ -13,6 +13,9 @@ import '../imports/ui/pages/projects/projects.js';
 import '../imports/ui/components/project_nav/project_nav.js';
 import '../imports/ui/pages/projects/project_home.js';
 import '../imports/ui/pages/programs/program_home.js';
+import '../imports/ui/pages/programs/program_workshops.js';
+import '../imports/ui/pages/programs/program_workshops_book.js';
+
 import '../imports/ui/pages/partners/partners.js';
 import '../imports/ui/pages/partners/partners_striped.js';
 import '../imports/ui/components/profile/profile.js';
@@ -77,6 +80,23 @@ FlowRouter.route('/projects/view/test-project/:program_name', {
     BlazeLayout.render('layout_app', { main: 'program_home', current_nav: 'projects', sub_nav: 'project_nav' });
   },
 });
+
+FlowRouter.route('/projects/view/test-project/:program_name/workshops', {
+  name: 'projects.program.workshops',
+  action() {
+    BlazeLayout.render('layout_app', { main: 'program_workshops', current_nav: 'projects', sub_nav: 'project_nav' });
+  },
+});
+
+FlowRouter.route('/projects/view/test-project/:program_name/workshops/book', {
+  name: 'projects.program.workshops.book',
+  action() {
+    BlazeLayout.render('layout_app', { main: 'program_workshops', current_nav: 'projects', sub_nav: 'project_nav', slideout: 'program_workshops_book', slideout_title: "Calendly Booking" });
+  },
+});
+
+
+
 
 
 FlowRouter.route('/quotes/', {
