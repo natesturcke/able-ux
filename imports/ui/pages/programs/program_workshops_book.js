@@ -4,7 +4,7 @@ import './programs.less';
 
 Template.program_workshops_book.onRendered(function() {
 
-  Session.set("currentPathName", 'projects');
+  Session.set("currentPathName", 'book');
 
   $(document).ready(function() {
   })

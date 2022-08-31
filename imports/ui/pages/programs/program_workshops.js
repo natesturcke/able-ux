@@ -5,7 +5,7 @@ import './programs.less';
 Template.program_workshops.onRendered(function() {
 
 
-  Session.set("currentPathName", 'projects');
+  Session.set("currentPathName", 'workshops');
 
 
   $(document).ready(function() {

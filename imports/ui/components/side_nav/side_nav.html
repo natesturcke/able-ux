@@ -74,10 +74,12 @@
 
             {{#if current_program}}
 
+
             <ul class="nav-list sub-nav">
 
-              <li class="{{#if current_program}}current{{/if}}">
-                <a href="#">
+
+              <li class="{{#if equals currentPathName 'overview'}}current{{/if}}">
+                <a href="{{pathFor 'projects.program.view' layout=getLayout program_name='test-project'}}">
                   <span><ion-icon name="bookmark-outline"></ion-icon>Overview</span>
                 </a>
               </li>
@@ -87,8 +89,7 @@
                   <span><ion-icon name="podium-outline"></ion-icon>Participants</span>
                 </a>
               </li>
-
-              <li>
+              <li class="{{#if equals currentPathName 'workshops'}}current{{/if}}">
                 <a href="{{pathFor 'projects.program.workshops' layout=getLayout program_name='test-project'}}">
                   <span><ion-icon name="documents-outline"></ion-icon>Workshops</span>
                 </a>

@@ -5,7 +5,7 @@ import './programs.less';
 Template.program_home.onRendered(function() {
 
 
-  Session.set("currentPathName", 'projects');
+  Session.set("currentPathName", 'overview');
 
 
   $(document).ready(function() {
