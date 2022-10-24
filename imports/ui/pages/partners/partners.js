@@ -55,7 +55,33 @@ var partners = [
     service: ['Consulting', 'Facilitation', 'RTO'],
     topics: ['Innovation', 'Design Thinking', 'Strategy'],
     logo: '/images/partner_logos/soma.png'
-  }
+  },
+  {
+    name: 'Jennifer van Extralongname',
+    email: 'jen@soma.academy',
+    role: 'CEO',
+    profile_pic: '/images/users/u3.png',
+    organisation: 'Acme',
+    location: 'Sydnye, NSW',
+    experience: '1 - 3 years',
+    qualifications: ['Integral 360 Accredidation'],
+    service: [ 'RTO'],
+    topics: [],
+    logo: '/images/partner_logos/soma.png'
+  },
+  {
+    name: 'Donald Trumf',
+    email: 'don@soma.academy',
+    role: 'Master Coach',
+    profile_pic: '/images/users/u2.png',
+    organisation: 'Long Company Name Pty Ltd',
+    location: 'Perth, WA',
+    experience: '5 - 10 years',
+    qualifications: ['ICF - MCC', 'PhD', 'MBA', 'Integral 360 Accredidation'],
+    service: ['Consulting', 'Facilitation', 'RTO'],
+    topics: ['Innovation', 'Design Thinking', 'Strategy'],
+    logo: '/images/partner_logos/soma.png'
+  },
 ];
 
 

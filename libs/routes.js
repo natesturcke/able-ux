@@ -31,8 +31,11 @@ import '../imports/ui/pages/quotes/new_quote.js';
 import '../imports/ui/pages/coachees/coachees.js';
 
 import '../imports/ui/pages/onboarding/register.js';
-import '../imports/ui/pages/onboarding/onboarding.js'
-;
+import '../imports/ui/pages/onboarding/onboarding.js';
+import '../imports/ui/pages/onboarding/login.js'
+import '../imports/ui/pages/onboarding/register_invite.js'
+import '../imports/ui/pages/onboarding/register_invite_email.js'
+
 
 
 
@@ -55,6 +58,31 @@ FlowRouter.route('/register/', {
   name: 'register',
   action() {
     BlazeLayout.render('layout_blank', { main: 'register' });
+  },
+});
+
+FlowRouter.route('/register/invite', {
+  name: 'register_invite',
+  action() {
+    BlazeLayout.render('layout_blank', { main: 'register_invite' });
+  },
+});
+
+FlowRouter.route('/register/invite/email', {
+  name: 'register_invite_email',
+  action() {
+    BlazeLayout.render('layout_blank', { main: 'register_invite_email' });
+  },
+});
+
+
+
+
+
+FlowRouter.route('/login/', {
+  name: 'login',
+  action() {
+    BlazeLayout.render('layout_blank', { main: 'login' });
   },
 });
 
@@ -127,14 +155,14 @@ FlowRouter.route('/partner-network-alt/', {
 FlowRouter.route('/partner-network/', {
   name: 'partners',
   action() {
-    BlazeLayout.render('layout_app', { main: 'partners_striped'});
+    BlazeLayout.render('layout_app', { main: 'partners'});
   },
 });
 
 FlowRouter.route('/partner-network/:partner_id', {
   name: 'partners.profile',
   action() {
-    BlazeLayout.render('layout_app', { main: 'partners_striped', slideout: 'profile', slideout_title: "Partner profile" });
+    BlazeLayout.render('layout_app', { main: 'profile'});
   },
 });
 

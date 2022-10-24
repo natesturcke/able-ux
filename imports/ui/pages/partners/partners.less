@@ -4,10 +4,17 @@
 
 #partners{
 
+  margin-bottom: 3rem;
+
   .content-section.top{
     padding-bottom: 1rem;
     padding-left: 1rem;
     padding-right: 1rem;
+
+    .search-input{
+      width: 300px;
+      margin-right: 1rem;
+    }
 
     .content-section-title{
       margin: 0;
@@ -18,12 +25,11 @@
   .partners-holder{
 
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 1rem;
     padding: 1rem 1rem;
     border-radius: 1rem;
     background: @back-gray;
-    margin-bottom: 3rem;
 
 
     .partner-card{
@@ -32,21 +38,12 @@
       display: flex;
       flex-direction: column;
       color: @text;
-    //  box-shadow: none;
-
       margin: 0;
 
       .partner-image-holder{
-        padding: 2rem;
-        padding-bottom: 1rem;
-        flex: 0;
+        flex: 0 0 14rem;
+        padding-bottom: 80%;
 
-        .user-avatar{
-          box-shadow: none;
-          width: 12rem;
-          height: 12rem;
-          border-radius: 40%;
-        }
       }
 
       .card-body{
@@ -56,8 +53,7 @@
         justify-content: flex-start;
         text-align: center;
         flex: 1;
-        padding: 1.5rem;
-        padding-top: 0.5rem;
+        padding: 1rem;
 
 
       }
@@ -88,14 +84,14 @@
       }
 
       h3.partner-name{
-        font-size: 1.5rem;
+        font-size: 1.2rem;
         margin: 0;
         margin-bottom: 0.5rem;
       }
 
       span.partner-role{
         display: block;
-        font-size: 1.1rem;
+        font-size: 1rem;
         font-weight: bold;
         margin-bottom: 0.5rem;
       }
@@ -103,11 +99,30 @@
       span.partner-organisation{
         font-weight: normal;
         display: block;
+        margin-bottom: 0;
+      }
+
+      span.partner-role-and-org{
+        display: block;
         margin-bottom: 0.5rem;
+
+
+        .role{
+          font-weight: bold;
+          background: @back-gray;
+          padding: 0.2rem 0.2rem;
+          border-radius: 0.25rem;
+          display: inline-block;
+        }
+
+
       }
 
       .partner-location{
         margin-bottom: 0.5rem;
+
+        padding: 0.2rem 0.2rem;
+
       }
 
       .partner-experience{
@@ -175,12 +190,12 @@
   #partners{
 
     .partners-holder{
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
     }
   }
 }
 
-@media (max-width: 1500px) {
+@media (max-width: 1000px) {
   #partners{
 
     .partners-holder{

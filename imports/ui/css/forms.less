@@ -23,17 +23,27 @@ form {
     align-self: flex-end;
   }
 
+  > h3{
+    margin-top: 0;
+  }
+
   span.form-footer{
     display: inline-block;
     font-size: 0.8rem;
     color: @dark-gray;
     opacity: 0.8;
     text-align: center;
-    margin-top: 2rem;
+    margin-top: 1rem;
     width: 100%;
 
     a{
       color: @text;
+      transition: color 200ms;
+    }
+
+
+    a:hover{
+      color: @primary;
     }
   }
 
@@ -78,8 +88,8 @@ form {
 
   > label, > .label-holder {
     margin: 0;
-    flex: 0 0 300px;
-    max-width: 100%;
+    flex: 0 0 200px;
+    width: 200px;
     display: flex;
     align-items: center;
 
@@ -463,8 +473,8 @@ select {
 
   .select2-selection--multiple{
     .select2-selection__rendered{
-      padding-top: 0.75rem;
-      padding-bottom: 0.75rem;
+      padding-top: 0.25rem;
+      padding-bottom: 0.25rem;
       padding-left: 0.5rem;
     }
 
@@ -546,6 +556,7 @@ select {
       .select2-selection.select2-selection--multiple{
         border-color: transparent;
         background: transparent;
+        height: 2.5rem;
 
         border-radius: 0.5rem;
       }

@@ -6,6 +6,15 @@
   background: @back-gray;
   min-height: 100vh;
   padding: 6rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  > .able-logo{
+    width: 8rem;
+    margin-bottom:  4rem;
+
+  }
 
   .register-form{
 
@@ -16,6 +25,20 @@
     padding: 2rem;
     background: #fff;
 
+    > h3 {
+      margin-top: 0;
+    }
+
+    .forgot-password{
+      color: @primary;
+      display: block;
+      margin: 1rem 0;
+      display: block;
+      text-align: right;
+      font-weight: bold;
+      font-size: 0.9rem;
+    }
+
 
     .able-logo{
       width: 5rem;
@@ -25,8 +48,9 @@
       display: flex;
       background: @back-gray;
       border-radius: 2rem;
-      margin: 2rem 0;
-      padding: 2rem;
+      margin: 0rem 0;
+      margin-bottom: 1rem;
+      padding: 1rem;
 
 
       .user-avatar{
@@ -59,4 +83,41 @@
     }
 
   }
+
+  .register-form.with-image{
+    padding: 0;
+    width: 1000px;
+    display: flex;
+    align-items: stretch;
+    max-width: unset;
+
+
+    .onboarding-image{
+      width: 350px;
+      flex: 0 0 350px;
+      display: block;
+      background-position: center right;
+    }
+
+    > form {
+      padding: 4rem;
+      flex: 1 1 auto;
+    }
+
+    .form-row > label, .form-row > .label-holder{
+      flex: 0 0 250px;
+    }
+
+  }
+
+  .register-form.login{
+    width: 500px;
+    flex-direction: column-reverse;
+
+    .form-row > label{
+      flex: 0 0 150px;
+    }
+  }
+
+
 }

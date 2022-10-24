@@ -4,160 +4,175 @@
 @import '../../css/vars.less';
 @import '../../css/utils.less';
 
-.profile-full {
-  color: @text;
-  padding: 2rem;
+#profile{
 
-  .details-holder {
-    flex: 0;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-
-    .user-avatar {
-      box-shadow: none;
-      width: 12rem;
-      height: 12rem;
-      border-radius: 40%;
-      margin-bottom: 1rem;
-    }
+  .content-section{
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 1rem;
   }
 
-  div.bio{
-    padding: 1rem;
+  .profile-full {
+    color: @text;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 4rem;
+    border: 2rem solid @back-gray;
     border-radius: 1rem;
-    background: @back-gray;
-    margin-bottom: 2rem;
-    margin-top: 1rem;
-
-    p:last-child{
-      margin: 0;
-    }
-  }
 
 
-  img.profile-pic {}
-
-  h3.profile-name {
-    font-size: 2rem;
-    margin: 0 0 0.5rem;
-  }
-
-  span.profile-role {
-    display: block;
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin-bottom: 0.5rem;
-  }
-
-  span.profile-organisation {
-    font-weight: normal;
-    display: block;
-    margin-bottom: 0.5rem;
-  }
-
-  .profile-location {
-    margin-bottom: 0.5rem;
-  }
-
-  .profile-experience {
-    margin-bottom: 0.5rem;
-  }
-
-  .tag-row-holder{
-
-  }
-
-  .tags {
-    margin-top: 0.25rem;
-
-    li {
-      margin-bottom: 0.25rem;
-    }
-  }
-
-  .company-details{
-
-    padding: 1rem 0;
-
-    img.organisation-logo{
-      max-width: 10rem;
-      max-height: 6rem;
-    }
-
-    > * {
-      margin-bottom: 0.25rem;
-      display: block;
-    }
-
-    > *:last-child{
-      margin-bottom: 0;
-    }
-
-    > span {
-
+    .details-holder {
+      flex: 0;
+      text-align: center;
       display: flex;
       align-items: center;
-      padding: 0.25rem 0;
+      justify-content: center;
+      flex-direction: column;
 
-      ion-icon{
-        display: inline-block;
-        margin-right: 0.25rem;
-        opacity: 0.6;
-        font-size: 1.2rem;
+      .user-avatar {
+        box-shadow: none;
+        width: 18rem;
+        height: 18rem;
+        border-radius: 40%;
+        margin-bottom: 1rem;
       }
+    }
+
+    div.bio{
+      padding: 1rem;
+      border-radius: 1rem;
+      background: @back-gray;
+      margin-bottom: 2rem;
+      margin-top: 1rem;
+
+      p:last-child{
+        margin: 0;
+      }
+    }
+
+
+    img.profile-pic {}
+
+    h3.profile-name {
+      font-size: 2rem;
+      margin: 0 0 0.5rem;
+    }
+
+    span.profile-role {
+      display: block;
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+
+    span.profile-organisation {
+      font-weight: normal;
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+
+    .profile-location {
+      margin-bottom: 0.5rem;
+    }
+
+    .profile-experience {
+      margin-bottom: 0.5rem;
+    }
+
+    .tag-row-holder{
+
+    }
+
+    .tags {
+      margin-top: 0.25rem;
+
+      li {
+        margin-bottom: 0.25rem;
+      }
+    }
+
+    .company-details{
+
+      padding: 1rem 0;
+
+      img.organisation-logo{
+        max-width: 10rem;
+        max-height: 6rem;
+      }
+
+      > * {
+        margin-bottom: 0.25rem;
+        display: block;
+      }
+
+      > *:last-child{
+        margin-bottom: 0;
+      }
+
+      > span {
+
+        display: flex;
+        align-items: center;
+        padding: 0.25rem 0;
+
+        ion-icon{
+          display: inline-block;
+          margin-right: 0.25rem;
+          opacity: 0.6;
+          font-size: 1.2rem;
+        }
+
+        > label{
+          display: inline-block;
+          margin: 0;
+          margin-right: 0.25rem;
+          opacity: 0.6;
+
+        }
+      }
+
+      .organisation-name{
+        font-size: 1.1rem;
+        font-weight: bold;
+        color: @black;
+      }
+    }
+
+    .tag-row.top{
+      align-items: flex-start;
 
       > label{
-        display: inline-block;
-        margin: 0;
-        margin-right: 0.25rem;
-        opacity: 0.6;
-
+        padding-top: 1rem;
       }
     }
 
-    .organisation-name{
-      font-size: 1.1rem;
-      font-weight: bold;
-      color: @black;
-    }
-  }
-
-  .tag-row.top{
-    align-items: flex-start;
-
-    > label{
-      padding-top: 1rem;
-    }
-  }
-
-  .tag-row {
-    display: flex;
-    align-items: center;
-    border-top: 1px solid @border;
-    width: 100%;
-    padding: 0.25rem 0.25rem 0.25rem 0.5rem;
-
-    > label {
-      flex: 0 0 125px;
-      width: 200px;
-      font-size: 0.9rem;
+    .tag-row {
       display: flex;
       align-items: center;
-      opacity: 0.6;
+      border-top: 1px solid @border;
+      width: 100%;
+      padding: 0.25rem 0.25rem 0.25rem 0.5rem;
 
-      ion-icon {
-        font-size: 1.25rem;
-        display: inline-block;
-        margin-right: 0.25rem;
+      > label {
+        flex: 0 0 125px;
+        width: 200px;
+        font-size: 0.9rem;
+        display: flex;
+        align-items: center;
+        opacity: 0.6;
+
+        ion-icon {
+          font-size: 1.25rem;
+          display: inline-block;
+          margin-right: 0.25rem;
+        }
       }
-    }
 
-    > span,
-    ul.tags-list {
-      flex: 1;
+      > span,
+      ul.tags-list {
+        flex: 1;
+      }
     }
   }
 }

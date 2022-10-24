@@ -1,9 +1,19 @@
 <template name='partners'>
   <div id="partners">
 
-    <div class="content-section top">
+    <div class="content-section top ">
       <div class="content-section-title-holder">
         <h1 class="content-section-title">Partner Network</h1>
+
+        <div class="right">
+
+
+        <div class="input-row with-icon search-input">
+          <i class="fa fa-search"></i>
+          <input type="text" placeholder="Search partners...">
+        </div>
+
+
         <div class="input-row with-icon search-input filter-input">
           <span>
             <ion-icon name="filter-circle-outline"></ion-icon>Filter
@@ -37,6 +47,8 @@
             </optgroup>
           </select>
         </div>
+        </div>
+
       </div>
     </div>
 
@@ -49,21 +61,20 @@
 
         <a href="{{pathFor 'partners.profile' partner_id='nate'}}" class="partner-card {{#if current_profile}}show-profile{{/if}}">
 
-          <div class="partner-image-holder">
-            <div class="user-avatar" style="background-image: url({{profile_pic}})"> </div>
-          </div>
+          <div class="image-back partner-image-holder" style="background-image: url({{profile_pic}})"></div>
 
           <div class="card-body">
 
+
+
             <h3 class="partner-name">{{name}}</h3>
-            <span class="partner-role">{{role}}</span>
+            <span class="partner-role-and-org"><span class="role">{{role}}</span><span class="seperator">&nbsp;at&nbsp;</span>{{organisation}}</span>
 
-            <span class="partner-organisation">{{organisation}}</span>
-
-            <span class="partner-location badge  white">
+            <span class="partner-location badge">
               <ion-icon name="earth-outline"></ion-icon>{{location}}
             </span>
-            <span class="partner-experience badge white flat"><span>Experience:</span>{{experience}}</span>
+            </div>
+          <!--<div class="card-details">
 
             <ul class="tags-list tags">
 
@@ -85,22 +96,29 @@
 
             </ul>
 
-            <ul class="tags-list tags">
-
-              {{#each topics}}
-                <li>
-                  <span class="badge white small flat">{{this}}</span>
-                </li>
-              {{/each}}
-
-            </ul>
-
-          </div>
+          </div>-->
 
         </a>
 
       {{/each}}
+
+
     </div>
+    <div class="table-bottom">
+
+      <div class="left">
+        <span class="badge found-badge">8 results</span>
+
+      </div>
+
+      <div class="right">
+
+        <a href="#" class="button white pagination-button">Prevous</a>
+        <a href="#" class="button white pagination-button">Next</a>
+      </div>
+
+    </div>
+
     </div>
 
 </template>

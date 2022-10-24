@@ -1,0 +1,46 @@
+<template name='login'>
+
+
+  <div class="onboard-wrapper">
+
+    <img src="/images/able.svg" alt="able-logo-with-text" class="able-logo">
+
+
+    <div class="register-form with-image">
+
+      <div class="onboarding-image image-back" style="background-image: url('/images/onboarding_image.jpg')">
+
+      </div>
+
+
+      <form>
+
+        <h3>Welcome back</h3>
+
+        <div class="form-row">
+          <label>Email*</label>
+          <input type="text" placeholder="john.smith@email.com" value="" required />
+        </div>
+
+        <div class="form-row">
+          <label>Password*</label>
+          <input type="password" value="" required />
+        </div>
+
+        <div class="form-submit-holder">
+          <input type="submit" class="button" value="Login" />
+        </div>
+
+        <span class="form-footer">Don't have an account? <a href="{{pathFor 'register'}}">Register</a> for free.</span>
+
+        <span class="form-footer">By registering you agree to our <a href="#">privacy policy</a> and <a href="#">terms of use</a></span>
+
+      </form>
+
+    </div>
+
+  </div>
+
+
+
+</template>

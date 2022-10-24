@@ -46,8 +46,7 @@
 
       <a href="{{pathFor 'partners.profile' partner_id='nate'}}" class="partner-card striped">
 
-          <div class="partner-image-holder">
-            <div class="user-avatar" style="background-image: url({{profile_pic}})"> </div>
+          <div class="partner-image-holder image-back" style="background-image: url({{profile_pic}})">
           </div>
 
           <div class="card-body">
@@ -55,24 +54,11 @@
             <h3 class="partner-name">{{name}}</h3>
             <span class="partner-role">{{role}}</span>
             <span class="partner-organisation">{{organisation}}</span>
+            <span><ion-icon name="earth-outline"></ion-icon>{{location}}</span>
+
 
           </div>
 
-          <div class="tag-row">
-            <label>
-              <ion-icon name="earth-outline"></ion-icon>Location
-            </label>
-            <span>{{location}}</span>
-
-          </div>
-
-          <div class="tag-row">
-            <label>
-              <ion-icon name="bar-chart-outline"></ion-icon>Experience
-            </label>
-            <span>{{experience}}</span>
-
-          </div>
 
           <div class="tag-row">
             <label>
@@ -90,35 +76,6 @@
 
           </div>
 
-          <div class="tag-row">
-            <label>
-              <ion-icon name="school-outline"></ion-icon>Qualifications
-            </label>
-            <ul class="tags-list tags">
-
-              {{#each qualifications}}
-                <li>
-                  <span class="badge small">{{this}}</span>
-                </li>
-              {{/each}}
-
-            </ul>
-          </div>
-
-          <div class="tag-row">
-            <label>
-              <ion-icon name="cube-outline"></ion-icon>Topics
-            </label>
-            <ul class="tags-list tags">
-
-              {{#each topics}}
-                <li>
-                  <span class="badge white small flat">{{this}}</span>
-                </li>
-              {{/each}}
-
-            </ul>
-          </div>
 
         </a>
 
